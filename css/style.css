@@ -240,17 +240,30 @@ ul {
   align-items: center;
   justify-content: space-between;
 }
-
+/* --- Header Logo Dimensions --- */
 .brand-logo {
   display: flex;
   align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
 }
 
 .logo-image {
   height: 48px;
   width: auto;
-  max-width: 240px;
+  max-width: 310px;
+  object-fit: contain;
+  display: block;
 }
+
+/* Mobile Header Adjustment */
+@media (max-width: 768px) {
+  .logo-image {
+    height: 38px;
+    max-width: 240px;
+  }
+}
+
 
 .nav-links {
   display: flex;
