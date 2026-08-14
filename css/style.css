@@ -1,0 +1,575 @@
+/* ==========================================================================
+   TRANSPORT OF INDIA LOGISTICS SOLUTION (TILS) - CORPORATE WHITE & BLUE
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap');
+
+:root {
+  /* Color Palette (Clean White, Corporate Blue, Logistics Amber Yellow) */
+  --bg-body: #FFFFFF;
+  --bg-subtle: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --bg-dark-blue: #0B2246; /* Used for Header, Footer & Accents */
+  
+  /* Brand Colors */
+  --brand-blue: #0056B3;
+  --brand-blue-hover: #004085;
+  --brand-navy: #0B2246;
+  --brand-yellow: #FFB800; /* Logistics Amber / Yellow */
+  --brand-yellow-hover: #E5A600;
+  
+  /* Borders & Shadows */
+  --border-light: #E2E8F0;
+  --border-active: #CBD5E1;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px -2px rgba(11, 34, 70, 0.08);
+  --shadow-lg: 0 12px 28px -4px rgba(11, 34, 70, 0.12);
+
+  /* Typography */
+  --text-dark: #0F172A;
+  --text-body: #334155;
+  --text-muted: #64748B;
+  --text-white: #FFFFFF;
+  --font-heading: 'Space Grotesk', -apple-system, sans-serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+
+  /* Layout */
+  --container-width: 1240px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-full: 9999px;
+  --transition: all 0.25s ease-in-out;
+}
+
+/* --- Base & Reset --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--bg-body);
+  color: var(--text-body);
+  font-family: var(--font-body);
+}
+
+body {
+  overflow-x: hidden;
+  line-height: 1.65;
+  background-color: var(--bg-body);
+  color: var(--text-body);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+ul {
+  list-style: none;
+}
+
+/* --- Container & Utilities --- */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 5.5rem 0;
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--brand-blue);
+  background: #EFF6FF;
+  border: 1px solid #DBEAFE;
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1.25rem;
+}
+
+.eyebrow-yellow {
+  color: #9A6700;
+  background: #FFFBEB;
+  border-color: #FDE68A;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  font-size: 1.08rem;
+  line-height: 1.65;
+}
+
+.highlight-blue {
+  color: var(--brand-blue);
+}
+
+.highlight-yellow {
+  color: #D97706;
+}
+
+/* --- Clean White Cards --- */
+.glass-card,
+.service-card,
+.info-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.glass-card:hover,
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: #BFDBFE;
+  box-shadow: var(--shadow-lg);
+}
+
+/* --- Professional Buttons (Blue & Yellow) --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.85rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.btn-primary,
+.btn-blue {
+  background-color: var(--brand-blue);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(0, 86, 179, 0.25);
+}
+
+.btn-primary:hover,
+.btn-blue:hover {
+  background-color: var(--brand-blue-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 86, 179, 0.35);
+  color: #FFFFFF;
+}
+
+.btn-yellow,
+.btn-orange {
+  background-color: var(--brand-yellow);
+  color: #0F172A;
+  box-shadow: 0 4px 14px rgba(255, 184, 0, 0.3);
+}
+
+.btn-yellow:hover,
+.btn-orange:hover {
+  background-color: var(--brand-yellow-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 184, 0, 0.4);
+}
+
+.btn-secondary {
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  color: var(--text-dark);
+}
+
+.btn-secondary:hover {
+  background: #F8FAFC;
+  border-color: var(--brand-blue);
+  color: var(--brand-blue);
+}
+
+/* --- Top Header Navigation --- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 990;
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--border-light);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  padding: 0.85rem 0;
+  transition: var(--transition);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  height: 48px;
+  width: auto;
+  max-width: 240px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.nav-link {
+  font-size: 0.925rem;
+  font-weight: 600;
+  color: var(--text-body);
+  position: relative;
+  padding: 0.4rem 0;
+}
+
+.nav-link:hover {
+  color: var(--brand-blue);
+}
+
+.nav-link.active {
+  color: var(--brand-blue);
+  border-bottom: 2px solid var(--brand-yellow);
+}
+
+/* Hamburger Button */
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 42px;
+  height: 42px;
+  background: #F1F5F9;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburger-btn span {
+  width: 22px;
+  height: 2.5px;
+  background: var(--brand-navy);
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   FIXED & REDESIGNED MOBILE SIDEBAR DRAWER
+   ========================================================================== */
+.mobile-nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(11, 34, 70, 0.6); /* Translucent navy backdrop */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 9998;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mobile-nav-overlay.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav-panel {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: min(85vw, 340px);
+  height: 100vh;
+  background: #FFFFFF; /* Crisp Clean White Drawer */
+  border-left: 3px solid var(--brand-yellow); /* Yellow brand accent strip */
+  box-shadow: -8px 0 25px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
+}
+
+.mobile-nav-panel.is-active {
+  right: 0;
+}
+
+.mobile-nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: 1.25rem;
+}
+
+.mobile-close-btn {
+  background: #F1F5F9;
+  border: 1px solid var(--border-light);
+  color: var(--text-dark);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.mobile-close-btn:hover {
+  background: #E2E8F0;
+  color: #EF4444;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.mobile-nav-link {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: var(--transition);
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+  background-color: #EFF6FF;
+  color: var(--brand-blue);
+  border-left: 3px solid var(--brand-blue);
+}
+
+.mobile-nav-footer {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.mobile-contact-pill {
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-bottom: 1.25rem;
+  background: #F8FAFC;
+  padding: 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+}
+
+.mobile-contact-pill strong {
+  color: var(--text-dark);
+}
+
+/* --- Hero Section Adjustment --- */
+.hero-section {
+  background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+  padding-top: 8rem;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--brand-navy);
+  margin-bottom: 1.25rem;
+}
+
+.hero-desc {
+  font-size: 1.1rem;
+  color: var(--text-body);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 580px;
+}
+
+/* --- Corporate Blue Footer --- */
+.site-footer {
+  background-color: var(--brand-navy);
+  color: #E2E8F0;
+  padding: 4.5rem 0 2rem 0;
+  border-top: 4px solid var(--brand-yellow);
+}
+
+.footer-heading {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 1.25rem;
+  border-left: 3px solid var(--brand-yellow);
+  padding-left: 0.5rem;
+}
+
+.footer-list a {
+  color: #94A3B8;
+  font-size: 0.9rem;
+}
+
+.footer-list a:hover {
+  color: var(--brand-yellow);
+  padding-left: 4px;
+}
+
+.footer-contact-item {
+  color: #CBD5E1;
+  font-size: 0.88rem;
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.footer-contact-item svg {
+  color: var(--brand-yellow);
+  flex-shrink: 0;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #94A3B8;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .nav-links, .nav-cta {
+    display: none !important;
+  }
+  .hamburger-btn {
+    display: flex !important;
+  }
+  .hero-section {
+    padding-top: 6.5rem;
+  }
+}
+
+
+/* ==========================================================================
+   FOOTER CONTACT FIX - STRICT SVG & COLUMN SIZING
+   ========================================================================== */
+
+/* Multi-column footer layout */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1.2fr 2fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* Fix for the contact list item container */
+.footer-contact-item {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  gap: 0.85rem !important;
+  margin-bottom: 1.25rem !important;
+  color: #CBD5E1 !important;
+  font-size: 0.875rem !important;
+  line-height: 1.5 !important;
+  width: 100% !important;
+}
+
+/* FIX: Force all footer contact SVGs to a fixed small size */
+.footer-contact-item svg {
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;  /* Prevents icon from stretching or collapsing */
+  min-height: 20px !important;
+  max-width: 20px !important;
+  max-height: 20px !important;
+  color: var(--brand-yellow) !important;
+  flex-shrink: 0 !important;   /* Never allow text to squish the icon */
+  margin-top: 3px !important;
+  display: inline-block !important;
+}
+
+/* Text area beside the icon */
+.footer-contact-item > div {
+  flex: 1 1 auto !important;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  color: #CBD5E1 !important;
+}
+
+.footer-contact-item a {
+  color: #FFFFFF !important;
+  text-decoration: none;
+}
+
+.footer-contact-item a:hover {
+  color: var(--brand-yellow) !important;
+}
+
+/* Responsive collapse on mobile */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+}
