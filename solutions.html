@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise Supply Chain Solutions & Telematics | Transport Of India Logistics Solution (TILS)</title>
+  <meta name="description" content="Explore TILS digital logistics ecosystem: AI-powered route planning, IoT sensor fleet telemetry, automated E-Waybill lifecycle management, and real-time enterprise visibility.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300D9FF'><path d='M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z'/></svg>">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    .page-hero {
+      padding: 9rem 0 4rem 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .solution-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+      margin-bottom: 5rem;
+    }
+    .solution-block:nth-child(even) {
+      direction: rtl;
+    }
+    .solution-block:nth-child(even) > * {
+      direction: ltr;
+    }
+    .product-tag {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent-cyan);
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+    .tech-stack-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1.5rem;
+    }
+    .tech-pill {
+      font-size: 0.75rem;
+      font-family: var(--font-heading);
+      padding: 0.3rem 0.8rem;
+      border-radius: var(--radius-full);
+      background: rgba(0, 217, 255, 0.08);
+      border: 1px solid var(--glass-border);
+      color: var(--accent-cyan);
+    }
+    .tech-pill-orange {
+      background: rgba(255, 122, 0, 0.08);
+      border-color: var(--glass-border-orange);
+      color: var(--accent-orange);
+    }
+    .mockup-window {
+      background: #030814;
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);
+    }
+    .mockup-header {
+      background: rgba(255, 255, 255, 0.04);
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .mockup-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+    }
+    .mockup-dot:nth-child(1) { background: #EF4444; }
+    .mockup-dot:nth-child(2) { background: #F59E0B; }
+    .mockup-dot:nth-child(3) { background: #10B981; }
+    .mockup-body {
+      padding: 1.5rem;
+      font-size: 0.85rem;
+    }
+    @media (max-width: 900px) {
+      .solution-block {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        margin-bottom: 3.5rem;
+      }
+      .solution-block:nth-child(even) {
+        direction: ltr;
+      }
+    }
+  </style>
+</head>
+<body class="bg-grid-pattern">
+
+<!-- ================= SITE HEADER ================= -->
+<header class="site-header">
+  <div class="container nav-container">
+    <a href="index.html" class="brand-logo" aria-label="TILS Home">
+      <!-- Actual TILS Vector Logo -->
+      <img src="assets/logos/logo.svg" alt="TILS - Transport Of India Logistics Solution" class="logo-image" 
+           onerror="this.style.display='none'; document.getElementById('text-fallback').style.display='flex';">
+      
+      <!-- Text Fallback in case SVG path is missing -->
+      <div id="text-fallback" class="brand-text-fallback" style="display: none;">
+        <div class="logo-badge"><span class="tils-blue">TI</span><span class="tils-orange">LS</span></div>
+        <div class="brand-text">
+          <span class="brand-title">Transport Of India</span>
+          <span class="brand-subtitle">Logistics Solution</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation Links (Hidden on Mobile) -->
+    <nav class="nav-links" aria-label="Main Navigation">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="solutions.html" class="nav-link">Solutions</a>
+      <a href="projects.html" class="nav-link">Case Studies</a>
+      <a href="team.html" class="nav-link">Team</a>
+      <a href="careers.html" class="nav-link">Careers</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    <!-- Desktop CTA (Hidden on Mobile) -->
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-primary" style="padding: 0.65rem 1.4rem; font-size: 0.85rem;">
+        Track Consignment
+      </a>
+    </div>
+
+    <!-- Mobile Hamburger Toggle Button (Shown only on Mobile) -->
+    <button class="hamburger-btn" aria-label="Toggle navigation drawer" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+  <!-- ================= MOBILE NAVIGATION DRAWER ================= -->
+  <div class="mobile-nav-overlay"></div>
+  <aside class="mobile-nav-panel">
+    <div class="mobile-nav-header">
+      <img src="assets/logos/logo.svg" alt="TILS Logo" style="height: 38px; width: auto;">
+      <button class="mobile-close-btn" aria-label="Close navigation">&times;</button>
+    </div>
+    
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link active">Home</a>
+      <a href="about.html" class="mobile-nav-link">About TILS</a>
+      <a href="services.html" class="mobile-nav-link">Logistics Services</a>
+      <a href="solutions.html" class="mobile-nav-link">Enterprise Solutions</a>
+      <a href="projects.html" class="mobile-nav-link">Case Studies</a>
+      <a href="team.html" class="mobile-nav-link">Leadership & Team</a>
+      <a href="careers.html" class="mobile-nav-link">Careers</a>
+      <a href="faq.html" class="mobile-nav-link">FAQ</a>
+      <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+    </div>
+
+    <div class="mobile-nav-footer">
+      <div class="mobile-contact-pill">
+        <span><strong>HQ:</strong> Ondipudur, Coimbatore</span>
+        <span><strong>Direct:</strong> +91 7845514762</span>
+        <span><strong>Dispatch:</strong> cbe@tilsindia.com</span>
+      </div>
+      <a href="contact.html" class="btn btn-yellow" style="width: 100%;">Instant Freight Quote</a>
+    </div>
+  </aside>
+
+  <!-- ================= PAGE HERO ================= -->
+  <section class="page-hero">
+    <div class="cyber-orb-bg" style="left: 50%; transform: translate(-50%, -50%);"></div>
+    <div class="container reveal-fade">
+      <div class="eyebrow">Enterprise Telematics & Digital Infrastructure</div>
+      <h1 class="page-hero-title">Intelligent Fleet & <span class="text-gradient">Supply Chain Software</span></h1>
+      <p class="section-subtitle" style="max-width: 720px; margin: 0 auto;">
+        Combining physical heavy transport assets with cutting-edge telematics, digital dispatch control, and predictive route algorithms for absolute supply chain control.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= SOLUTIONS ARCHITECTURE ================= -->
+  <section class="section" style="padding-top: 1rem;">
+    <div class="container">
+
+      <!-- Solution 1: AI Route Intelligence -->
+      <div class="solution-block">
+        <div class="reveal-fade">
+          <span class="product-tag">Product 01 // Intelligent Dispatch</span>
+          <h2 style="font-family: var(--font-heading); font-size: 2rem; margin-bottom: 1rem;">TILS IntelliRoute™ Corridor Optimizer</h2>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;">
+            <strong>The Problem:</strong> Interstate freight across Indian highways frequently encounters severe bottleneck points, toll gate congestion, weather diversions, and unexpected roadwork delays.
+          </p>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;">
+            <strong>Our Engineered Solution:</strong> IntelliRoute™ dynamically calculates optimal route paths for 20ft/32ft/40ft vehicle classes factoring axle load restrictions, live FASTag toll clearances, bridge height parameters, and real-time highway telemetry.
+          </p>
+          <div class="tech-stack-row">
+            <span class="tech-pill">Predictive ETA Engine</span>
+            <span class="tech-pill">FASTag API Integration</span>
+            <span class="tech-pill">Axle-Load Mapping</span>
+            <span class="tech-pill">Congestion Avoidance</span>
+          </div>
+        </div>
+
+        <div class="mockup-window reveal-fade delay-1">
+          <div class="mockup-header">
+            <div class="mockup-dot"></div>
+            <div class="mockup-dot"></div>
+            <div class="mockup-dot"></div>
+            <span style="font-size: 0.75rem; color: var(--text-muted); margin-left: 0.5rem; font-family: var(--font-heading);">IntelliRoute // Live Highway Corridor Stream</span>
+          </div>
+          <div class="mockup-body">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+              <span style="color: var(--accent-cyan); font-weight: 600;">COIMBATORE &rarr; MUMBAI (NH 48)</span>
+              <span style="color: #10B981;">Optimal Flow</span>
+            </div>
+            <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: 8px; margin-bottom: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted);">
+                <span>Total Corridor Distance</span>
+                <span>Active Transit Vehicles</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 1.1rem; font-weight: 700; color: #fff; margin-top: 0.25rem;">
+                <span>1,268 KM</span>
+                <span style="color: var(--accent-orange);">42 Units Active</span>
+              </div>
+            </div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.6;">
+              <span style="color: var(--accent-cyan);">&#x2713;</span> Toll clearance automated via FASTag API.<br>
+              <span style="color: var(--accent-cyan);">&#x2713;</span> Pune bypass green corridor scheduled for 02:30 AM arrival.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Solution 2: IoT Telematics & Geofencing -->
+      <div class="solution-block">
+        <div class="reveal-fade">
+          <span class="product-tag" style="color: var(--accent-orange);">Product 02 // Asset Telemetry</span>
+          <h2 style="font-family: var(--font-heading); font-size: 2rem; margin-bottom: 1rem;">TILS SecureMesh™ Fleet IoT Platform</h2>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;">
+            <strong>The Problem:</strong> Industrial consignors face cargo tamper risks, unnotified route deviations, unauthorized stopovers, and lack of live trailer condition visibility.
+          </p>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;">
+            <strong>Our Engineered Solution:</strong> Integrated dual-band GPS receivers, smart digital container e-locks, door-open alert sensors, and fuel telematics relay 30-second ping telemetry directly to the client's corporate ERP dashboard.
+          </p>
+          <div class="tech-stack-row">
+            <span class="tech-pill tech-pill-orange">E-Lock Tamper Sensors</span>
+            <span class="tech-pill tech-pill-orange">30s GPS Ping Rate</span>
+            <span class="tech-pill tech-pill-orange">Continuous Geofencing</span>
+            <span class="tech-pill tech-pill-orange">Driver Behavior Telemetry</span>
+          </div>
+        </div>
+
+        <div class="mockup-window reveal-fade delay-1">
+          <div class="mockup-header">
+            <div class="mockup-dot"></div>
+            <div class="mockup-dot"></div>
+            <div class="mockup-dot"></div>
+            <span style="font-size: 0.75rem; color: var(--text-muted); margin-left: 0.5rem; font-family: var(--font-heading);">SecureMesh // Geofence & Container Telemetry</span>
+          </div>
+          <div class="mockup-body">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1rem;">
+              <div style="background: rgba(0, 217, 255, 0.05); border: 1px solid var(--glass-border); padding: 0.75rem; border-radius: 8px;">
+                <span style="color: var(--text-muted); font-size: 0.75rem;">CONTAINER SEAL</span>
+                <div style="color: #10B981; font-weight: 700; margin-top: 0.25rem;">LOCKED & VERIFIED</div>
+              </div>
+              <div style="background: rgba(255, 122, 0, 0.05); border: 1px solid var(--glass-border-orange); padding: 0.75rem; border-radius: 8px;">
+                <span style="color: var(--text-muted); font-size: 0.75rem;">TRAILER SPEED</span>
+                <div style="color: var(--accent-orange); font-weight: 700; margin-top: 0.25rem;">58 KM/H (GOVERNED)</div>
+              </div>
+            </div>
+            <div style="background: rgba(255,255,255,0.03); padding: 0.75rem; border-radius: 8px; font-size: 0.8rem; color: var(--text-secondary);">
+              Current Location: NH 544 (Near Salem Bypass Junction)<br>
+              Next Milestone: Krishnagiri Industrial Hub (ETA: 3h 15m)
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Solution 3: Digital POD & Paperless Documentation -->
+      <div class="solution-block">
+        <div class="reveal-fade">
+          <span class="product-tag">Product 03 // Compliance Automation</span>
+          <h2 style="font-family: var(--font-heading); font-size: 2rem; margin-bottom: 1rem;">TILS QuickPOD™ & Automated Billing Gateway</h2>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;">
+            <strong>The Problem:</strong> Paper delivery receipts take weeks to return via mail, causing multi-month invoice reconciliation delays and working capital lockups for manufacturers.
+          </p>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;">
+            <strong>Our Engineered Solution:</strong> Instant mobile consignee sign-off at unloading dock generates a cryptographically signed, timestamped, GPS-verified PDF e-POD within 30 seconds, automatically triggering ERP invoice generation.
+          </p>
+          <div class="tech-stack-row">
+            <span class="tech-pill">Instant Electronic POD</span>
+            <span class="tech-pill">E-Waybill Auto-Extension</span>
+            <span class="tech-pill">GST Billing Portal</span>
+            <span class="tech-pill">Automated Audit Trail</span>
+          </div>
+        </div>
+
+        <div class="mockup-window reveal-fade delay-1">
+          <div class="mockup-header">
+            <div class="mockup-dot"></div>
+            <div class="mockup-dot"></div>
+            <div class="mockup-dot"></div>
+            <span style="font-size: 0.75rem; color: var(--text-muted); margin-left: 0.5rem; font-family: var(--font-heading);">QuickPOD // Proof of Delivery Verified</span>
+          </div>
+          <div class="mockup-body">
+            <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); padding: 1rem; border-radius: 8px; margin-bottom: 0.75rem;">
+              <div style="color: #10B981; font-weight: 700; font-size: 0.95rem; margin-bottom: 0.25rem;">CONSIGNMENT DISPATCH VERIFIED</div>
+              <div style="color: var(--text-secondary); font-size: 0.8rem;">Gate Receipt: #TILS-2026-98412 • Unloaded: 18:42 IST</div>
+            </div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.6;">
+              Consignee: Coimbatore Industrial Engineering Ltd.<br>
+              Status: Signed by Warehouse In-Charge • Digitally Archived
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CTA BANNER ================= -->
+  <section class="section">
+    <div class="container">
+      <div class="glass-card reveal-fade" style="text-align: center; padding: 4rem 2rem; background: radial-gradient(circle at center, rgba(0, 217, 255, 0.12) 0%, rgba(7, 17, 31, 0.9) 80%);">
+        <h2 style="font-family: var(--font-heading); font-size: 2.2rem; margin-bottom: 1rem;">Integrate TILS Telematics Into Your ERP</h2>
+        <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 2rem auto; font-size: 1.05rem;">
+          Connect with our technical integration team for enterprise API documentation, custom dashboard setups, and live tracking webhooks.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="contact.html" class="btn btn-primary">Schedule Technical Demo</a>
+          <a href="projects.html" class="btn btn-secondary">Read Industrial Case Studies</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MULTI-COLUMN FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-badge" style="margin-bottom: 1rem;">
+            <span class="tils-blue">TI</span><span class="tils-orange">LS</span>
+          </div>
+          <p>
+            Transport Of India Logistics Solution (TILS) is a premier enterprise freight transport and supply chain management provider, delivering precision cargo handling across Indian economic corridors.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="LinkedIn"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+            <a href="#" class="social-icon" aria-label="Twitter"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Logistics Network</h4>
+          <ul class="footer-list">
+            <li><a href="about.html">About Company</a></li>
+            <li><a href="services.html">Full Truckload (FTL)</a></li>
+            <li><a href="services.html">Multi-Modal Freight</a></li>
+            <li><a href="solutions.html">Fleet Telematics</a></li>
+            <li><a href="projects.html">Industrial Case Studies</a></li>
+            <li><a href="careers.html">Driver & Operations Careers</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Key Corridors</h4>
+          <ul class="footer-list">
+            <li><a href="contact.html">Coimbatore &ndash; Chennai</a></li>
+            <li><a href="contact.html">Coimbatore &ndash; Mumbai/JNPT</a></li>
+            <li><a href="contact.html">Bengaluru &ndash; Hyderabad</a></li>
+            <li><a href="contact.html">Kolkata &ndash; Delhi NCR</a></li>
+            <li><a href="contact.html">Tuticorin &ndash; Kochi Ports</a></li>
+            <li><a href="faq.html">Freight SLA Terms</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Registered Office</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <div>
+              <strong>Transport Of India Logistics Solution</strong><br>
+              Door no.: 2525-2526, Trichy Road, Stanes Colony, Ondipudur (Post), Coimbatore - 641 016.<br>
+              <span style="color: var(--accent-cyan); font-size: 0.8rem;">Landmarks:</span> Before Shanthi Gear Aththi Vruksham Play School, Near Miraj Cinemas.
+            </div>
+          </div>
+
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <div>
+              <a href="mailto:cbe@tilsindia.com">cbe@tilsindia.com</a><br>
+              <a href="mailto:tcd@tilsindia.com">tcd@tilsindia.com</a>
+            </div>
+          </div>
+
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <div>
+              <a href="tel:+917845514762">+91 7845514762</a><br>
+              <a href="tel:+917845583762">+91 7845583762</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Transport Of India Logistics Solution (TILS). All rights reserved.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="faq.html">Privacy Policy</a>
+          <a href="faq.html">Terms of Carriage</a>
+          <a href="contact.html">Regional Dispatch Directory</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

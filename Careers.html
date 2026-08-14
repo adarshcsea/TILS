@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers & Opportunities | Transport Of India Logistics Solution (TILS)</title>
+  <meta name="description" content="Build the future of Indian freight transport. Explore career openings in operations, fleet telematics, driver management, and business development at TILS.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300D9FF'><path d='M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z'/></svg>">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    .page-hero {
+      padding: 9rem 0 4rem 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .perks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-bottom: 5rem;
+    }
+    .job-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .job-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+      transition: var(--transition-smooth);
+    }
+    .job-meta-row {
+      display: flex;
+      gap: 1.25rem;
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      flex-wrap: wrap;
+    }
+    .job-tag {
+      color: var(--accent-cyan);
+      font-weight: 600;
+    }
+    @media (max-width: 768px) {
+      .job-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+      }
+      .job-card .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body class="bg-grid-pattern">
+
+<!-- ================= SITE HEADER ================= -->
+<header class="site-header">
+  <div class="container nav-container">
+    <a href="index.html" class="brand-logo" aria-label="TILS Home">
+      <!-- Actual TILS Vector Logo -->
+      <img src="assets/logos/logo.svg" alt="TILS - Transport Of India Logistics Solution" class="logo-image" 
+           onerror="this.style.display='none'; document.getElementById('text-fallback').style.display='flex';">
+      
+      <!-- Text Fallback in case SVG path is missing -->
+      <div id="text-fallback" class="brand-text-fallback" style="display: none;">
+        <div class="logo-badge"><span class="tils-blue">TI</span><span class="tils-orange">LS</span></div>
+        <div class="brand-text">
+          <span class="brand-title">Transport Of India</span>
+          <span class="brand-subtitle">Logistics Solution</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation Links (Hidden on Mobile) -->
+    <nav class="nav-links" aria-label="Main Navigation">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="solutions.html" class="nav-link">Solutions</a>
+      <a href="projects.html" class="nav-link">Case Studies</a>
+      <a href="team.html" class="nav-link">Team</a>
+      <a href="careers.html" class="nav-link">Careers</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    <!-- Desktop CTA (Hidden on Mobile) -->
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-primary" style="padding: 0.65rem 1.4rem; font-size: 0.85rem;">
+        Track Consignment
+      </a>
+    </div>
+
+    <!-- Mobile Hamburger Toggle Button (Shown only on Mobile) -->
+    <button class="hamburger-btn" aria-label="Toggle navigation drawer" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+  <!-- ================= MOBILE NAVIGATION DRAWER ================= -->
+  <div class="mobile-nav-overlay"></div>
+  <aside class="mobile-nav-panel">
+    <div class="mobile-nav-header">
+      <img src="assets/logos/logo.svg" alt="TILS Logo" style="height: 38px; width: auto;">
+      <button class="mobile-close-btn" aria-label="Close navigation">&times;</button>
+    </div>
+    
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link active">Home</a>
+      <a href="about.html" class="mobile-nav-link">About TILS</a>
+      <a href="services.html" class="mobile-nav-link">Logistics Services</a>
+      <a href="solutions.html" class="mobile-nav-link">Enterprise Solutions</a>
+      <a href="projects.html" class="mobile-nav-link">Case Studies</a>
+      <a href="team.html" class="mobile-nav-link">Leadership & Team</a>
+      <a href="careers.html" class="mobile-nav-link">Careers</a>
+      <a href="faq.html" class="mobile-nav-link">FAQ</a>
+      <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+    </div>
+
+    <div class="mobile-nav-footer">
+      <div class="mobile-contact-pill">
+        <span><strong>HQ:</strong> Ondipudur, Coimbatore</span>
+        <span><strong>Direct:</strong> +91 7845514762</span>
+        <span><strong>Dispatch:</strong> cbe@tilsindia.com</span>
+      </div>
+      <a href="contact.html" class="btn btn-yellow" style="width: 100%;">Instant Freight Quote</a>
+    </div>
+  </aside>
+
+  <!-- ================= PAGE HERO ================= -->
+  <section class="page-hero">
+    <div class="cyber-orb-bg" style="left: 50%; transform: translate(-50%, -50%);"></div>
+    <div class="container reveal-fade">
+      <div class="eyebrow eyebrow-orange">Join India's Modern Logistics Infrastructure</div>
+      <h1 class="page-hero-title">Shape the Arteries of <span class="text-gradient">Commerce</span></h1>
+      <p class="section-subtitle" style="max-width: 700px; margin: 0 auto;">
+        Join our growing family across Coimbatore, Chennai, and national transport nodes. We empower ambitious logistics professionals, route planners, and developers.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= PERKS & CULTURE ================= -->
+  <section class="section" style="padding-top: 1rem;">
+    <div class="container">
+      <div class="section-header reveal-fade">
+        <div class="eyebrow">Workplace Principles</div>
+        <h2 class="section-title">Why Build Your Career at TILS?</h2>
+        <p class="section-subtitle">We merge traditional logistics hospitality with cutting-edge software and rapid growth pathways.</p>
+      </div>
+
+      <div class="perks-grid">
+        <div class="glass-card reveal-fade delay-1">
+          <div style="font-size: 2rem; color: var(--accent-cyan); margin-bottom: 0.75rem;">📈</div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 0.5rem;">Accelerated Growth</h3>
+          <p style="color: var(--text-secondary); font-size: 0.885rem; line-height: 1.6;">Direct exposure to national enterprise clients and rapid career advancement across regional hubs.</p>
+        </div>
+
+        <div class="glass-card reveal-fade delay-2">
+          <div style="font-size: 2rem; color: var(--accent-orange); margin-bottom: 0.75rem;">🛡️</div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 0.5rem;">Comprehensive Health</h3>
+          <p style="color: var(--text-secondary); font-size: 0.885rem; line-height: 1.6;">Top-tier medical coverage, accident insurance, and family healthcare programs for all operational staff.</p>
+        </div>
+
+        <div class="glass-card reveal-fade delay-3">
+          <div style="font-size: 2rem; color: var(--accent-cyan); margin-bottom: 0.75rem;">💻</div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 0.5rem;">Tech-Forward Workflows</h3>
+          <p style="color: var(--text-secondary); font-size: 0.885rem; line-height: 1.6;">Work with state-of-the-art telematics platforms, automated dispatch software, and modern cloud tools.</p>
+        </div>
+
+        <div class="glass-card reveal-fade delay-4">
+          <div style="font-size: 2rem; color: var(--accent-orange); margin-bottom: 0.75rem;">🏆</div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 0.5rem;">Performance Incentives</h3>
+          <p style="color: var(--text-secondary); font-size: 0.885rem; line-height: 1.6;">Transparent monthly and quarterly milestone bonuses tied directly to corridor punctuality and hub performance.</p>
+        </div>
+      </div>
+
+      <!-- ================= OPEN ROLES ================= -->
+      <div class="section-header reveal-fade" style="margin-bottom: 3rem;">
+        <div class="eyebrow eyebrow-orange">Current Openings</div>
+        <h2 class="section-title">Open Positions Across Our Hubs</h2>
+        <p class="section-subtitle">Find the right role for your skills and apply directly to our Coimbatore HR desk.</p>
+      </div>
+
+      <div class="job-list">
+        <!-- Job 1 -->
+        <div class="glass-card job-card reveal-fade delay-1">
+          <div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: #fff; margin-bottom: 0.35rem;">Senior Freight Operations Manager</h3>
+            <div class="job-meta-row">
+              <span class="job-tag">Operations</span>
+              <span>📍 Coimbatore HQ (Ondipudur)</span>
+              <span>💼 Full-Time • 5+ Years Exp</span>
+            </div>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.75rem; max-width: 650px;">
+              Lead interstate FTL dispatch, driver crew rotations, and ensure zero-delay compliance across South-to-West industrial corridors.
+            </p>
+          </div>
+          <a href="contact.html?role=operations-manager" class="btn btn-primary">Apply for Position</a>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="glass-card job-card reveal-fade delay-2">
+          <div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: #fff; margin-bottom: 0.35rem;">IoT & Telematics Software Engineer</h3>
+            <div class="job-meta-row">
+              <span class="job-tag" style="color: var(--accent-orange);">Engineering</span>
+              <span>📍 Coimbatore / Hybrid</span>
+              <span>💼 Full-Time • 3+ Years Exp</span>
+            </div>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.75rem; max-width: 650px;">
+              Maintain GPS telemetry feeds, sensor communication pipelines, and optimize real-time routing algorithms for the TILS IntelliRoute™ platform.
+            </p>
+          </div>
+          <a href="contact.html?role=telematics-engineer" class="btn btn-orange">Apply for Position</a>
+        </div>
+
+        <!-- Job 3 -->
+        <div class="glass-card job-card reveal-fade delay-3">
+          <div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: #fff; margin-bottom: 0.35rem;">Key Enterprise Account Executive</h3>
+            <div class="job-meta-row">
+              <span class="job-tag">Commercial Sales</span>
+              <span>📍 Chennai / Coimbatore</span>
+              <span>💼 Full-Time • 4+ Years Exp</span>
+            </div>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.75rem; max-width: 650px;">
+              Manage annual contracted logistics portfolios for leading manufacturing, automotive Tier-1, and textile exporters.
+            </p>
+          </div>
+          <a href="contact.html?role=account-executive" class="btn btn-primary">Apply for Position</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= MULTI-COLUMN FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-badge" style="margin-bottom: 1rem;">
+            <span class="tils-blue">TI</span><span class="tils-orange">LS</span>
+          </div>
+          <p>
+            Transport Of India Logistics Solution (TILS) is a premier enterprise freight transport and supply chain management provider, delivering precision cargo handling across Indian economic corridors.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="LinkedIn"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+            <a href="#" class="social-icon" aria-label="Twitter"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Logistics Network</h4>
+          <ul class="footer-list">
+            <li><a href="about.html">About Company</a></li>
+            <li><a href="services.html">Full Truckload (FTL)</a></li>
+            <li><a href="services.html">Multi-Modal Freight</a></li>
+            <li><a href="solutions.html">Fleet Telematics</a></li>
+            <li><a href="projects.html">Industrial Case Studies</a></li>
+            <li><a href="careers.html">Driver & Operations Careers</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Key Corridors</h4>
+          <ul class="footer-list">
+            <li><a href="contact.html">Coimbatore &ndash; Chennai</a></li>
+            <li><a href="contact.html">Coimbatore &ndash; Mumbai/JNPT</a></li>
+            <li><a href="contact.html">Bengaluru &ndash; Hyderabad</a></li>
+            <li><a href="contact.html">Kolkata &ndash; Delhi NCR</a></li>
+            <li><a href="contact.html">Tuticorin &ndash; Kochi Ports</a></li>
+            <li><a href="faq.html">Freight SLA Terms</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Registered Office</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <div>
+              <strong>Transport Of India Logistics Solution</strong><br>
+              Door no.: 2525-2526, Trichy Road, Stanes Colony, Ondipudur (Post), Coimbatore - 641 016.<br>
+              <span style="color: var(--accent-cyan); font-size: 0.8rem;">Landmarks:</span> Before Shanthi Gear Aththi Vruksham Play School, Near Miraj Cinemas.
+            </div>
+          </div>
+
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <div>
+              <a href="mailto:cbe@tilsindia.com">cbe@tilsindia.com</a><br>
+              <a href="mailto:tcd@tilsindia.com">tcd@tilsindia.com</a>
+            </div>
+          </div>
+
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <div>
+              <a href="tel:+917845514762">+91 7845514762</a><br>
+              <a href="tel:+917845583762">+91 7845583762</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Transport Of India Logistics Solution (TILS). All rights reserved.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="faq.html">Privacy Policy</a>
+          <a href="faq.html">Terms of Carriage</a>
+          <a href="contact.html">Regional Dispatch Directory</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
