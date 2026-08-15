@@ -1,8 +1,62 @@
 /* ==========================================================================
-   TILS - RESPONSIVE ANIMATIONS & MOTION ENGINE
+   TILS - COMPLETE SCROLL & CARD ANIMATIONS ENGINE
    ========================================================================== */
 
-/* --- Desktop 3D Wireframe / Orbit Visual --- */
+/* --- 1. Scroll-Trigger Reveal Animations (Cards, Headings, Sections) --- */
+.reveal-fade {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* Activated via IntersectionObserver in js/main.js */
+.reveal-fade.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered Delay for Multi-Card Grids */
+.delay-1 { transition-delay: 0.12s; }
+.delay-2 { transition-delay: 0.24s; }
+.delay-3 { transition-delay: 0.36s; }
+.delay-4 { transition-delay: 0.48s; }
+
+/* --- 2. Interactive Card Hover & Lift Animations --- */
+.glass-card,
+.service-card,
+.case-card,
+.team-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease !important;
+}
+
+.glass-card:hover,
+.service-card:hover,
+.case-card:hover,
+.team-card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 16px 36px -6px rgba(11, 34, 70, 0.14) !important;
+  border-color: #93C5FD !important;
+}
+
+/* --- 3. Floating Telemetry Card Animation --- */
+@keyframes floatSmooth {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+.animate-float {
+  animation: floatSmooth 4.5s ease-in-out infinite;
+}
+
+/* --- 4. Desktop 3D Wireframe / Orbit Visual --- */
 .futuristic-orbit-visual {
   position: relative;
   width: 420px;
@@ -50,7 +104,7 @@
   box-shadow: 0 0 10px rgba(0, 86, 179, 0.4);
 }
 
-/* Keyframes */
+/* Orbit Keyframes */
 @keyframes rotateClockwise {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -61,16 +115,7 @@
   to { transform: rotate(0deg); }
 }
 
-@keyframes floatSmooth {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-}
-
-.animate-float {
-  animation: floatSmooth 4.5s ease-in-out infinite;
-}
-
-/* --- Subtle Background Animation (Active on Both Desktop & Mobile) --- */
+/* --- 5. Ambient Glowing Background Bubble --- */
 .cyber-orb-bg {
   position: absolute;
   top: 40%;
@@ -90,30 +135,7 @@
   100% { transform: scale(1.08); opacity: 1; }
 }
 
-/* --- Mobile Specific Animation Rules (<= 768px) --- */
-@media (max-width: 768px) {
-  /* Hide the wide spinning rings on mobile to prevent shaking/jitter */
-  .orbit-ring {
-    display: none !important;
-  }
-
-  .futuristic-orbit-visual {
-    width: 100% !important;
-    height: auto !important;
-    margin: 1.5rem auto 0 auto !important;
-  }
-
-  /* Subtle pulsing glow for mobile background */
-  .cyber-orb-bg {
-    width: 280px !important;
-    height: 280px !important;
-    right: 50% !important;
-    transform: translateX(50%) !important;
-    top: 20% !important;
-  }
-}
-
-/* --- Status Beacon --- */
+/* --- 6. Live Status Beacon Pulse --- */
 .beacon-dot {
   width: 8px;
   height: 8px;
@@ -135,4 +157,38 @@
 @keyframes beaconPulse {
   0% { transform: scale(0.6); opacity: 1; }
   100% { transform: scale(2.2); opacity: 0; }
+}
+
+/* --- 7. Mobile Optimization (Prevents Overflows on Small Screens) --- */
+@media (max-width: 768px) {
+  .orbit-ring {
+    display: none !important; /* Rings hidden on mobile to avoid overflow */
+  }
+
+  .futuristic-orbit-visual {
+    width: 100% !important;
+    height: auto !important;
+    margin: 1.5rem auto 0 auto !important;
+  }
+
+  .cyber-orb-bg {
+    width: 260px !important;
+    height: 260px !important;
+    right: 50% !important;
+    transform: translateX(50%) !important;
+    top: 15% !important;
+  }
+}
+
+/* --- 8. Accessibility: Reduced Motion Support --- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal-fade {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
