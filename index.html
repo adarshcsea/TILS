@@ -15,103 +15,107 @@
   <link rel="stylesheet" href="css/responsive.css">
 
   <style>
-    /* Page Specific Hero & Component Rules */
+    /* ================= HERO & RESPONSIVE LAYOUT FIXES ================= */
     .hero-section {
-      min-height: 92vh;
-      display: flex;
-      align-items: center;
-      padding-top: 8rem;
-      padding-bottom: 5rem;
+      min-height: auto;
+      padding-top: 6.5rem;
+      padding-bottom: 3.5rem;
       position: relative;
       overflow: hidden;
+      background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
     }
+
     .hero-grid {
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
       align-items: center;
-      gap: 4rem;
+      gap: 3rem;
       position: relative;
       z-index: 10;
     }
+
     .hero-title {
       font-family: var(--font-heading);
-      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
       font-weight: 800;
-      line-height: 1.12;
-      letter-spacing: -0.02em;
-      margin-bottom: 1.5rem;
+      line-height: 1.18;
+      color: var(--brand-navy);
+      margin-bottom: 1.25rem;
     }
+
     .hero-desc {
-      font-size: 1.15rem;
-      color: var(--text-secondary);
-      line-height: 1.7;
-      margin-bottom: 2.25rem;
+      font-size: 1.05rem;
+      color: var(--text-body);
+      line-height: 1.65;
+      margin-bottom: 2rem;
       max-width: 560px;
     }
+
     .hero-ctas {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.25rem;
+      gap: 1rem;
       align-items: center;
-      margin-bottom: 3rem;
+      margin-bottom: 2.5rem;
     }
+
+    /* Tabular numbers prevent jitter/shaking during count-up */
     .hero-stats-strip {
-      display: flex;
-      align-items: center;
-      gap: 2.5rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid var(--border-light);
+      width: 100%;
     }
+
     .stat-mini-item h4 {
       font-family: var(--font-heading);
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--accent-cyan);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--brand-blue);
+      font-variant-numeric: tabular-nums;
+      line-height: 1.1;
+      white-space: nowrap;
     }
+
     .stat-mini-item p {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.05em;
+      font-weight: 600;
+      margin-top: 0.25rem;
     }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
-    }
-    .service-card-icon {
-      width: 56px;
-      height: 56px;
-      border-radius: 12px;
-      background: rgba(0, 217, 255, 0.1);
-      border: 1px solid var(--glass-border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent-cyan);
-      margin-bottom: 1.5rem;
-      transition: var(--transition-smooth);
-    }
-    .glass-card:hover .service-card-icon {
-      background: var(--accent-cyan);
-      color: #030814;
-      box-shadow: 0 0 20px var(--accent-cyan);
-    }
-    .tracking-widget-card {
-      background: rgba(7, 17, 31, 0.75);
-      border: 1px solid var(--glass-border);
-      backdrop-filter: blur(20px);
-      border-radius: var(--radius-lg);
-      padding: 1.5rem;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-    }
-    .telemetry-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.75rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-      font-size: 0.85rem;
+
+    /* Mobile Viewport Fixes */
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+      }
+
+      .hero-ctas {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .hero-ctas .btn {
+        width: 100%;
+      }
+
+      .hero-stats-strip {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 0.75rem !important;
+      }
+
+      .stat-mini-item h4 {
+        font-size: 1.25rem !important;
+      }
+
+      .stat-mini-item p {
+        font-size: 0.68rem !important;
+      }
     }
   </style>
 </head>
