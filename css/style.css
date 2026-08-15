@@ -586,3 +586,81 @@ ul {
     gap: 2rem !important;
   }
 }
+
+
+
+/* ==========================================================================
+   HIGH-CONTRAST TELEMETRY CARD & ZERO-SHAKE VIEWPORT FIX
+   ========================================================================== */
+
+/* Prevent horizontal page shaking on all mobile browsers */
+html, body {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  position: relative;
+}
+
+/* Clean High-Contrast Live Tracking Widget */
+.tracking-widget-card {
+  background: #0B2246 !important; /* Deep Navy Card */
+  border: 1px solid rgba(255, 184, 0, 0.3) !important;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem !important;
+  box-shadow: 0 12px 32px rgba(11, 34, 70, 0.18) !important;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+/* High-Contrast Row Typography */
+.telemetry-row {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 0.85rem 0 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  font-size: 0.9rem !important;
+}
+
+.telemetry-row:last-child {
+  border-bottom: none !important;
+}
+
+/* Labels on the left (Clear readable light silver) */
+.telemetry-label {
+  color: #94A3B8 !important;
+  font-weight: 500 !important;
+}
+
+/* Values on the right (Bright pure white / highlight color) */
+.telemetry-value {
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  text-align: right;
+}
+
+.telemetry-status-green {
+  color: #10B981 !important; /* Vivid Emerald */
+  font-weight: 700 !important;
+}
+
+.telemetry-status-yellow {
+  color: var(--brand-yellow) !important; /* Bright Yellow */
+  font-weight: 700 !important;
+}
+
+/* Hero Section Responsiveness */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+    text-align: left;
+  }
+}
