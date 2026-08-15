@@ -1,35 +1,8 @@
 /* ==========================================================================
-   TRANSPORT OF INDIA LOGISTICS SOLUTION (TILS) - ANIMATIONS & EFFECTS
+   TILS - RESPONSIVE ANIMATIONS & MOTION ENGINE
    ========================================================================== */
 
-/* --- Cyber Sphere & Ambient Background Glows --- */
-.cyber-orb-bg {
-  position: absolute;
-  top: 50%;
-  right: -5%;
-  transform: translateY(-50%);
-  width: 580px;
-  height: 580px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(0, 217, 255, 0.12) 0%, rgba(124, 58, 237, 0.08) 50%, transparent 75%);
-  filter: blur(40px);
-  pointer-events: none;
-  z-index: 0;
-  animation: pulseOrb 8s ease-in-out infinite alternate;
-}
-
-.ambient-glow-orange {
-  position: absolute;
-  width: 450px;
-  height: 450px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 122, 0, 0.09) 0%, transparent 70%);
-  filter: blur(50px);
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* Abstract 3D Wireframe / Orbit Visual in Hero */
+/* --- Desktop 3D Wireframe / Orbit Visual --- */
 .futuristic-orbit-visual {
   position: relative;
   width: 420px;
@@ -42,43 +15,30 @@
 .orbit-ring {
   position: absolute;
   border-radius: 50%;
-  border: 1px dashed rgba(0, 217, 255, 0.35);
-  box-shadow: 0 0 15px rgba(0, 217, 255, 0.1);
+  border: 1px dashed rgba(0, 86, 179, 0.25);
+  box-shadow: 0 0 15px rgba(0, 86, 179, 0.08);
 }
 
 .orbit-ring-1 {
   width: 100%;
   height: 100%;
   animation: rotateClockwise 28s linear infinite;
-  border-left-color: var(--accent-orange);
+  border-left-color: var(--brand-yellow);
 }
 
 .orbit-ring-2 {
   width: 75%;
   height: 75%;
-  border: 1px solid rgba(0, 136, 255, 0.25);
-  border-top-color: var(--accent-cyan);
+  border: 1px solid rgba(0, 86, 179, 0.2);
+  border-top-color: var(--brand-blue);
   animation: rotateCounterClockwise 18s linear infinite;
 }
 
 .orbit-ring-3 {
   width: 50%;
   height: 50%;
-  border: 1px dotted rgba(255, 122, 0, 0.4);
+  border: 1px dotted rgba(245, 158, 11, 0.35);
   animation: rotateClockwise 12s linear infinite;
-}
-
-.orbit-core {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(0, 217, 255, 0.25) 0%, rgba(7, 17, 31, 0.8) 70%);
-  border: 1px solid var(--accent-cyan);
-  box-shadow: 0 0 35px var(--accent-cyan-glow), inset 0 0 20px rgba(0, 217, 255, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  backdrop-filter: blur(8px);
 }
 
 .orbit-node {
@@ -86,151 +46,93 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: var(--accent-cyan);
-  box-shadow: 0 0 12px var(--accent-cyan);
+  background: var(--brand-blue);
+  box-shadow: 0 0 10px rgba(0, 86, 179, 0.4);
 }
 
 /* Keyframes */
 @keyframes rotateClockwise {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 @keyframes rotateCounterClockwise {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
 }
 
-@keyframes pulseOrb {
-  0% {
-    transform: translateY(-50%) scale(0.95);
-    opacity: 0.7;
-  }
-  100% {
-    transform: translateY(-50%) scale(1.1);
-    opacity: 1;
-  }
+@keyframes floatSmooth {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
 }
 
-@keyframes floatElement {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-}
-
-/* Floating Utility */
 .animate-float {
-  animation: floatElement 5s ease-in-out infinite;
+  animation: floatSmooth 4.5s ease-in-out infinite;
 }
 
-/* --- Scroll Reveal Animations --- */
-.reveal-fade {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
+/* --- Subtle Background Animation (Active on Both Desktop & Mobile) --- */
+.cyber-orb-bg {
+  position: absolute;
+  top: 40%;
+  right: -5%;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 86, 179, 0.08) 0%, rgba(255, 184, 0, 0.04) 50%, transparent 70%);
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 0;
+  animation: pulseSubtle 7s ease-in-out infinite alternate;
 }
 
-.reveal-fade.is-revealed {
-  opacity: 1;
-  transform: translateY(0);
+@keyframes pulseSubtle {
+  0% { transform: scale(0.92); opacity: 0.6; }
+  100% { transform: scale(1.08); opacity: 1; }
 }
 
-/* Stagger Delays for Grid items */
-.delay-1 { transition-delay: 0.1s; }
-.delay-2 { transition-delay: 0.2s; }
-.delay-3 { transition-delay: 0.3s; }
-.delay-4 { transition-delay: 0.4s; }
+/* --- Mobile Specific Animation Rules (<= 768px) --- */
+@media (max-width: 768px) {
+  /* Hide the wide spinning rings on mobile to prevent shaking/jitter */
+  .orbit-ring {
+    display: none !important;
+  }
 
-/* --- Glowing Pulse Beacon (e.g. Active Fleet status) --- */
-.status-beacon {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
+  .futuristic-orbit-visual {
+    width: 100% !important;
+    height: auto !important;
+    margin: 1.5rem auto 0 auto !important;
+  }
+
+  /* Subtle pulsing glow for mobile background */
+  .cyber-orb-bg {
+    width: 280px !important;
+    height: 280px !important;
+    right: 50% !important;
+    transform: translateX(50%) !important;
+    top: 20% !important;
+  }
 }
 
+/* --- Status Beacon --- */
 .beacon-dot {
   width: 8px;
   height: 8px;
   background-color: #10B981;
   border-radius: 50%;
   position: relative;
+  display: inline-block;
 }
 
 .beacon-dot::after {
   content: '';
   position: absolute;
-  top: -4px;
-  left: -4px;
-  right: -4px;
-  bottom: -4px;
+  inset: -3px;
   border-radius: 50%;
   border: 2px solid #10B981;
   animation: beaconPulse 2s ease-out infinite;
 }
 
 @keyframes beaconPulse {
-  0% {
-    transform: scale(0.6);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(2.2);
-    opacity: 0;
-  }
-}
-
-/* --- Subtle Grid Line Background --- */
-.bg-grid-pattern {
-  background-size: 40px 40px;
-  background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-}
-
-/* --- Accordion Transitions --- */
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
-  opacity: 0;
-}
-
-.accordion-item.active .accordion-content {
-  opacity: 1;
-}
-
-.accordion-item .chevron-icon {
-  transition: transform 0.3s ease;
-}
-
-.accordion-item.active .chevron-icon {
-  transform: rotate(180deg);
-  color: var(--accent-cyan);
-}
-
-/* --- Accessibility (Reduced Motion) --- */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-  
-  .reveal-fade {
-    opacity: 1 !important;
-    transform: none !important;
-  }
+  0% { transform: scale(0.6); opacity: 1; }
+  100% { transform: scale(2.2); opacity: 0; }
 }
