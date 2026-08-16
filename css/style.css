@@ -664,3 +664,122 @@ html, body {
     text-align: left;
   }
 }
+
+
+/* ==========================================================================
+   TERMINAL PRELOADER (LOGISTICS & TELEMETRICS INITIALIZER)
+   ========================================================================== */
+
+.preloader-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #030814;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: 'Space Grotesk', 'Courier New', monospace;
+}
+
+.preloader-overlay.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.preloader-terminal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 90vw;
+  width: 440px;
+  padding: 1.5rem;
+}
+
+.terminal-title {
+  color: #00D9FF;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 12px rgba(0, 217, 255, 0.4);
+}
+
+.terminal-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  margin-bottom: 1.25rem;
+  color: #00D9FF;
+  font-size: 1.1rem;
+}
+
+.terminal-bar-container .bracket {
+  color: #64748B;
+  font-weight: 700;
+  user-select: none;
+}
+
+.terminal-bar-track {
+  flex: 1;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 217, 255, 0.25);
+  border-radius: 2px;
+  overflow: hidden;
+  padding: 1px;
+}
+
+.terminal-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: repeating-linear-gradient(
+    90deg,
+    #00D9FF,
+    #00D9FF 4px,
+    transparent 4px,
+    transparent 6px
+  );
+  box-shadow: 0 0 10px rgba(0, 217, 255, 0.6);
+  transition: width 0.08s linear;
+}
+
+.terminal-pct {
+  color: #F8FAFC;
+  font-size: 0.85rem;
+  font-weight: 600;
+  min-width: 42px;
+  text-align: right;
+}
+
+.terminal-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #10B981;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.terminal-status .status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #10B981;
+  box-shadow: 0 0 8px #10B981;
+  animation: pulseDot 1.2s infinite ease-in-out;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
