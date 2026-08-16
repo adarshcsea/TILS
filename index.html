@@ -121,6 +121,29 @@
 </head>
 <body class="bg-grid-pattern">
 
+  <!-- ================= TILS TERMINAL PRELOADER ================= -->
+<div id="preloader" class="preloader-overlay">
+  <div class="preloader-terminal">
+    <div class="terminal-title">INITIALIZING DISPATCH TELEMETRICS</div>
+    
+    <!-- ASCII Style Progress Bar -->
+    <div class="terminal-bar-container">
+      <span class="bracket">[</span>
+      <div class="terminal-bar-track">
+        <div id="preloader-fill" class="terminal-bar-fill"></div>
+      </div>
+      <span class="bracket">]</span>
+      <span id="preloader-pct" class="terminal-pct">0%</span>
+    </div>
+
+    <!-- Status Line -->
+    <div id="preloader-status" class="terminal-status">
+      <span class="status-dot"></span> ESTABLISHING GPS HANDSHAKE...
+    </div>
+  </div>
+</div>
+  
+
 <!-- ================= SITE HEADER ================= -->
 <header class="site-header">
   <div class="container nav-container">
