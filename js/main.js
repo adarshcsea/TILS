@@ -4,6 +4,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initTerminalPreloader();
   initStickyHeader();
   initMobileNavigation();
   initScrollAnimations();
@@ -13,7 +14,59 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
 });
 
-/* --- 1. Sticky Glass Header Controller --- */
+/* --- 0. Terminal Preloader & Page Reveal Engine --- */
+function initTerminalPreloader() {
+  const preloader = document.getElementById('preloader');
+  const fill = document.getElementById('preloader-fill');
+  const pct = document.getElementById('preloader-pct');
+  const status = document.getElementById('preloader-status');
+
+  if (!preloader || !fill || !pct || !status) return;
+
+  // Lock background scroll during preload
+  document.body.style.overflow = 'hidden';
+
+  const statusLogs = [
+    { at: 15, text: "CONNECTING PAN-INDIA FLEET MESH..." },
+    { at: 45, text: "SYNCING CORRIDOR TELEMETRICS..." },
+    { at: 75, text: "CALIBRATING DISPATCH NETWORK..." },
+    { at: 100, text: "SYSTEM ONLINE" }
+  ];
+
+  let progress = 0;
+
+  const interval = setInterval(() => {
+    progress += Math.floor(Math.random() * 8) + 3;
+
+    if (progress >= 100) {
+      progress = 100;
+      clearInterval(interval);
+
+      fill.style.width = '100%';
+      pct.textContent = '100%';
+      status.innerHTML = '<span class="status-dot"></span> SYSTEM ONLINE';
+      status.style.color = '#10B981';
+
+      setTimeout(() => {
+        preloader.classList.add('is-hidden');
+        document.body.style.overflow = '';
+      }, 550);
+      return;
+    }
+
+    fill.style.width = progress + '%';
+    pct.textContent = progress + '%';
+
+    for (let i = statusLogs.length - 1; i >= 0; i--) {
+      if (progress >= statusLogs[i].at) {
+        status.innerHTML = `<span class="status-dot"></span> ${statusLogs[i].text}`;
+        break;
+      }
+    }
+  }, 45);
+}
+
+/* --- 1. Sticky Header Controller --- */
 function initStickyHeader() {
   const header = document.querySelector('.site-header');
   if (!header) return;
@@ -74,7 +127,6 @@ function initScrollAnimations() {
   const elements = document.querySelectorAll('.reveal-fade');
   if (!elements.length) return;
 
-  // Respect user preference for reduced motion
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     elements.forEach(el => el.classList.add('is-revealed'));
     return;
@@ -113,7 +165,6 @@ function initAnimatedCounters() {
         const updateCounter = (currentTime) => {
           const elapsed = currentTime - startTime;
           const progress = Math.min(elapsed / duration, 1);
-          // Ease-out cubic calculation
           const easeOut = 1 - Math.pow(1 - progress, 3);
           const currentVal = Math.floor(easeOut * target);
 
@@ -135,7 +186,7 @@ function initAnimatedCounters() {
   counters.forEach(counter => observer.observe(counter));
 }
 
-/* --- 5. Accordion System (FAQs & Expandables) --- */
+/* --- 5. Accordion System (FAQs) --- */
 function initFaqAccordions() {
   const accordionItems = document.querySelectorAll('.accordion-item');
   if (!accordionItems.length) return;
@@ -148,9 +199,8 @@ function initFaqAccordions() {
 
     trigger.addEventListener('click', () => {
       const isActive = item.classList.contains('active');
-
-      // Close siblings if inside single-expand accordion container
       const parent = item.closest('.accordion-group');
+
       if (parent && parent.dataset.multiselect !== 'true') {
         parent.querySelectorAll('.accordion-item').forEach(sibling => {
           if (sibling !== item) {
@@ -175,7 +225,7 @@ function initFaqAccordions() {
   });
 }
 
-/* --- 6. Realistic Form Validation & Interactive Feedback --- */
+/* --- 6. Form Validation --- */
 function initFormValidation() {
   const forms = document.querySelectorAll('form[data-validate]');
   forms.forEach(form => {
@@ -197,7 +247,6 @@ function initFormValidation() {
           if (errorMsg) errorMsg.style.display = 'none';
         }
 
-        // Email specific check
         if (input.type === 'email' && input.value.trim()) {
           const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
           if (!emailRegex.test(input.value.trim())) {
@@ -217,12 +266,7 @@ function initFormValidation() {
         
         if (submitBtn) {
           submitBtn.disabled = true;
-          submitBtn.innerHTML = `
-            <svg class="animate-spin" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
-              <path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"></path>
-            </svg> 
-            Dispatching Request...`;
+          submitBtn.innerHTML = 'Dispatching Request...';
         }
 
         setTimeout(() => {
