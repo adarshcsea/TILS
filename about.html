@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | Transport Of India Logistics Solution (TILS)</title>
-  <meta name="description" content="Learn about Transport Of India Logistics Solution (TILS) — our legacy, leadership, nationwide infrastructure, and mission to engineer reliable multi-modal supply chains.">
+  <meta name="description" content="Learn about Transport Of India Logistics Solution (TILS) — established in 2025, powering nationwide FTL, LTL, ODC, and container logistics across 28+ states.">
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300D9FF'><path d='M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z'/></svg>">
@@ -16,49 +16,53 @@
 
   <style>
     .page-hero {
-      padding: 9rem 0 4rem 0;
+      padding: 8.5rem 0 3.5rem 0;
       text-align: center;
       position: relative;
       overflow: hidden;
+      background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
     }
     .page-hero-title {
       font-family: var(--font-heading);
-      font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+      font-size: clamp(2rem, 4.2vw, 3.2rem);
       font-weight: 800;
+      color: var(--brand-navy);
       margin-bottom: 1.25rem;
     }
     .story-grid {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
       gap: 3.5rem;
-      align-items: center;
+      align-items: start;
     }
     .timeline-container {
       position: relative;
-      padding-left: 2rem;
-      border-left: 2px solid rgba(0, 217, 255, 0.2);
-      margin-top: 2rem;
+      padding-left: 1.75rem;
+      border-left: 2px solid #DBEAFE;
+      margin-top: 1.5rem;
     }
     .timeline-item {
       position: relative;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
+    }
+    .timeline-item:last-child {
+      margin-bottom: 0;
     }
     .timeline-item::before {
       content: '';
       position: absolute;
-      left: -2.45rem;
+      left: -2.25rem;
       top: 0.25rem;
       width: 14px;
       height: 14px;
       border-radius: 50%;
-      background: var(--accent-cyan);
-      box-shadow: 0 0 10px var(--accent-cyan);
+      background: var(--brand-blue);
+      box-shadow: 0 0 0 4px #EFF6FF;
     }
     .timeline-year {
       font-family: var(--font-heading);
-      font-weight: 700;
-      color: var(--accent-orange);
-      font-size: 1.1rem;
+      font-weight: 800;
+      font-size: 1.05rem;
       margin-bottom: 0.35rem;
     }
     .values-grid {
@@ -71,57 +75,55 @@
         grid-template-columns: 1fr;
         gap: 2.5rem;
       }
+      .page-hero {
+        padding-top: 6.5rem;
+      }
     }
   </style>
 </head>
-<body class="bg-grid-pattern">
+<body>
 
-<!-- ================= SITE HEADER ================= -->
-<header class="site-header">
-  <div class="container nav-container">
-    <a href="index.html" class="brand-logo" aria-label="TILS Home">
-      <!-- Actual TILS Vector Logo -->
-      <img src="assets/logos/logo.svg" alt="TILS - Transport Of India Logistics Solution" class="logo-image" 
-           onerror="this.style.display='none'; document.getElementById('text-fallback').style.display='flex';">
-      
-      <!-- Text Fallback in case SVG path is missing -->
-      <div id="text-fallback" class="brand-text-fallback" style="display: none;">
-        <div class="logo-badge"><span class="tils-blue">TI</span><span class="tils-orange">LS</span></div>
-        <div class="brand-text">
-          <span class="brand-title">Transport Of India</span>
-          <span class="brand-subtitle">Logistics Solution</span>
+  <!-- ================= SITE HEADER ================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="TILS Home">
+        <img src="assets/logos/logo.svg" alt="TILS - Transport Of India Logistics Solution" class="logo-image" 
+             onerror="this.style.display='none'; document.getElementById('text-fallback').style.display='flex';">
+        
+        <div id="text-fallback" class="brand-text-fallback" style="display: none;">
+          <div class="logo-badge"><span class="tils-blue">TI</span><span class="tils-orange">LS</span></div>
+          <div class="brand-text">
+            <span class="brand-title">Transport Of India</span>
+            <span class="brand-subtitle">Logistics Solution</span>
+          </div>
         </div>
-      </div>
-    </a>
-
-    <!-- Desktop Navigation Links (Hidden on Mobile) -->
-    <nav class="nav-links" aria-label="Main Navigation">
-      <a href="index.html" class="nav-link active">Home</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="services.html" class="nav-link">Services</a>
-      <a href="solutions.html" class="nav-link">Solutions</a>
-      <a href="projects.html" class="nav-link">Case Studies</a>
-      <a href="team.html" class="nav-link">Team</a>
-      <a href="careers.html" class="nav-link">Careers</a>
-      <a href="faq.html" class="nav-link">FAQ</a>
-      <a href="contact.html" class="nav-link">Contact</a>
-    </nav>
-
-    <!-- Desktop CTA (Hidden on Mobile) -->
-    <div class="nav-cta">
-      <a href="contact.html" class="btn btn-primary" style="padding: 0.65rem 1.4rem; font-size: 0.85rem;">
-        Track Consignment
       </a>
-    </div>
 
-    <!-- Mobile Hamburger Toggle Button (Shown only on Mobile) -->
-    <button class="hamburger-btn" aria-label="Toggle navigation drawer" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </div>
-</header>
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="solutions.html" class="nav-link">Solutions</a>
+        <a href="projects.html" class="nav-link">Case Studies</a>
+        <a href="team.html" class="nav-link">Team</a>
+        <a href="careers.html" class="nav-link">Careers</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary" style="padding: 0.65rem 1.4rem; font-size: 0.85rem;">
+          Track Consignment
+        </a>
+      </div>
+
+      <button class="hamburger-btn" aria-label="Toggle navigation drawer" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
 
   <!-- ================= MOBILE NAVIGATION DRAWER ================= -->
   <div class="mobile-nav-overlay"></div>
@@ -132,8 +134,8 @@
     </div>
     
     <div class="mobile-nav-links">
-      <a href="index.html" class="mobile-nav-link active">Home</a>
-      <a href="about.html" class="mobile-nav-link">About TILS</a>
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="about.html" class="mobile-nav-link active">About TILS</a>
       <a href="services.html" class="mobile-nav-link">Logistics Services</a>
       <a href="solutions.html" class="mobile-nav-link">Enterprise Solutions</a>
       <a href="projects.html" class="mobile-nav-link">Case Studies</a>
@@ -146,6 +148,7 @@
     <div class="mobile-nav-footer">
       <div class="mobile-contact-pill">
         <span><strong>HQ:</strong> Ondipudur, Coimbatore</span>
+        <span><strong>Branch:</strong> Thiruchengode, Namakkal</span>
         <span><strong>Direct:</strong> +91 7845514762</span>
         <span><strong>Dispatch:</strong> cbe@tilsindia.com</span>
       </div>
@@ -157,10 +160,10 @@
   <section class="page-hero">
     <div class="cyber-orb-bg" style="left: 50%; transform: translate(-50%, -50%);"></div>
     <div class="container reveal-fade">
-      <div class="eyebrow eyebrow-orange">Corporate Profile & Mission</div>
-      <h1 class="page-hero-title">Architects of India's <span class="text-gradient">Integrated Freight Corridors</span></h1>
-      <p class="section-subtitle" style="max-width: 700px; margin: 0 auto;">
-        From our headquarters in Coimbatore's industrial hub to major maritime ports and national highway nodes, TILS bridges industrial manufacturing with precision logistics.
+      <div class="eyebrow">Corporate Profile & Mission</div>
+      <h1 class="page-hero-title">Architects of India's <span class="highlight-blue">Integrated Freight Corridors</span></h1>
+      <p class="section-subtitle" style="max-width: 720px; margin: 0 auto;">
+        From our headquarters in Coimbatore to our regional desk in Namakkal and national highway nodes, TILS bridges industrial manufacturing with precision logistics.
       </p>
     </div>
   </section>
@@ -170,56 +173,50 @@
     <div class="container">
       <div class="story-grid">
         <div class="reveal-fade">
-          <div class="eyebrow">Enterprise Legacy</div>
+          <div class="eyebrow eyebrow-yellow">Enterprise Foundation</div>
           <h2 class="section-title">Built on Trust, Precision, and Real-Time Accountability</h2>
-          <p style="color: var(--text-secondary); margin-bottom: 1.25rem; font-size: 1.05rem; line-height: 1.7;">
-            Transport Of India Logistics Solution (TILS) was established to eliminate the chronic bottlenecks of traditional highway transport. By uniting seasoned road haulage capabilities with modern GPS-synchronized tracking, digital documentation (E-Waybills & Instant e-PODs), and high-capacity multimodal hubs, we provide predictable cargo transit cycles.
+          <p style="color: var(--text-body); margin-bottom: 1.25rem; font-size: 1.05rem; line-height: 1.7;">
+            Transport Of India Logistics Solution (TILS) was established in 2025 to transform national freight movement. We provide comprehensive supply chain solutions through specialized <strong>Full Truck Load (FTL &ndash; all vehicle types)</strong>, <strong>Less Than Truckload (LTL)</strong>, and heavy-haul <strong>Over-Dimensional Cargo (ODC)</strong> logistics.
           </p>
-          <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.7;">
-            Headquartered strategically on Trichy Road in Ondipudur, Coimbatore, we operate in the heart of South India's manufacturing, textile machinery, automotive, and engineering belts, directly connecting local enterprises to national consumption epicenters and export ports.
+          <p style="color: var(--text-body); margin-bottom: 1.5rem; line-height: 1.7;">
+            Operating with dedicated container vehicle fleets available all over India, we connect South India's manufacturing, textile machinery, automotive, and engineering belts directly to maritime ports and industrial hubs across 28+ states.
           </p>
 
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem;">
             <div class="glass-card" style="padding: 1.5rem;">
-              <h4 style="color: var(--accent-cyan); font-family: var(--font-heading); margin-bottom: 0.5rem;">Our Mission</h4>
-              <p style="color: var(--text-secondary); font-size: 0.875rem;">To deliver zero-defect industrial haulage with transparent telematics, strict delivery SLAs, and uncompromised cargo safety.</p>
+              <h4 style="color: var(--brand-blue); font-family: var(--font-heading); margin-bottom: 0.5rem;">Our Mission</h4>
+              <p style="color: var(--text-muted); font-size: 0.875rem;">To deliver zero-defect industrial haulage across all vehicle types with transparent SLAs, strict safety standards, and live telematics tracking.</p>
             </div>
             <div class="glass-card" style="padding: 1.5rem;">
-              <h4 style="color: var(--accent-orange); font-family: var(--font-heading); margin-bottom: 0.5rem;">Our Vision</h4>
-              <p style="color: var(--text-secondary); font-size: 0.875rem;">To remain the premier logistics gateway uniting heavy industrial production with pan-India distribution and global ocean freight terminals.</p>
+              <h4 style="color: #D97706; font-family: var(--font-heading); margin-bottom: 0.5rem;">Our Vision</h4>
+              <p style="color: var(--text-muted); font-size: 0.875rem;">To be India’s premier logistics network, uniting industrial production hubs, domestic markets, and multi-modal container terminals nationwide.</p>
             </div>
           </div>
         </div>
 
-        <!-- Visual / Fleet Hub Architecture -->
+        <!-- Right Column: Operational Timeline -->
         <div class="reveal-fade delay-1">
-          <div class="glass-card" style="padding: 2.5rem; position: relative;">
-            <div class="eyebrow eyebrow-orange" style="margin-bottom: 1rem;">Infrastructure Footprint</div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 1.5rem; color: #fff;">Strategic Distribution Nodes</h3>
+          <div class="glass-card" style="padding: 2.25rem; position: relative;">
+            <div class="eyebrow eyebrow-yellow" style="margin-bottom: 1rem;">Operational Roadmap</div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--text-dark);">Core Transit Capabilities</h3>
             
             <div class="timeline-container">
               <div class="timeline-item">
-                <div class="timeline-year">2008 &ndash; Foundation</div>
-                <h4 style="color: #fff; font-size: 1rem;">Regional South Corridor Inception</h4>
-                <p style="color: var(--text-secondary); font-size: 0.875rem;">Commenced full truckload road freight operations between Coimbatore, Chennai, and Bengaluru industrial parks.</p>
+                <div class="timeline-year" style="color: var(--brand-blue);">2025 &ndash; Founding & Operational Launch</div>
+                <h4 style="color: var(--text-dark); font-size: 1rem; margin: 0.25rem 0;">Pan-India Freight Operations</h4>
+                <p style="color: var(--text-muted); font-size: 0.875rem;">Established core operations providing Full Truck Load (FTL) with all vehicle types, flexible LTL industrial consolidation, and heavy Over-Dimensional Cargo (ODC) movements.</p>
               </div>
 
               <div class="timeline-item">
-                <div class="timeline-year">2014 &ndash; Multimodal Expansion</div>
-                <h4 style="color: #fff; font-size: 1rem;">Containerized Freight Integration</h4>
-                <p style="color: var(--text-secondary); font-size: 0.875rem;">Extended operations into port-bound container transport servicing JNPT, Tuticorin (V.O.C.), and Cochin ports.</p>
+                <div class="timeline-year" style="color: #D97706;">Container Fleet Network</div>
+                <h4 style="color: var(--text-dark); font-size: 1rem; margin: 0.25rem 0;">All-India Container Logistics Chain</h4>
+                <p style="color: var(--text-muted); font-size: 0.875rem;">High-capacity containerized vehicles operating across manufacturing corridors, port drayage routes (JNPT, Chennai, Tuticorin, Cochin), and industrial hubs nationwide.</p>
               </div>
 
               <div class="timeline-item">
-                <div class="timeline-year">2020 &ndash; Digital Modernization</div>
-                <h4 style="color: #fff; font-size: 1rem;">IoT & GPS Telematics Fleet Upgrade</h4>
-                <p style="color: var(--text-secondary); font-size: 0.875rem;">Equipped 100% of contracted and company fleets with continuous GPS telemetry, geo-fencing, and real-time status portals.</p>
-              </div>
-
-              <div class="timeline-item" style="margin-bottom: 0;">
-                <div class="timeline-year">2026 &ndash; Pan-India Network</div>
-                <h4 style="color: #fff; font-size: 1rem;">150+ Fleet Hubs Across India</h4>
-                <p style="color: var(--text-secondary); font-size: 0.875rem;">Managing high-volume specialized heavy engineering freight, automotive components, and textile industrial supply chains nationwide.</p>
+                <div class="timeline-year" style="color: var(--brand-blue);">2026 &ndash; Digital Platform Launch</div>
+                <h4 style="color: var(--text-dark); font-size: 1rem; margin: 0.25rem 0;">Enterprise Web & Telematics Portal</h4>
+                <p style="color: var(--text-muted); font-size: 0.875rem;">Launched the centralized digital dispatch portal with live corridor tracking, electronic documentation (E-Waybills & e-PODs), and rapid quote calculation.</p>
               </div>
             </div>
           </div>
@@ -229,7 +226,7 @@
   </section>
 
   <!-- ================= CORE VALUES ================= -->
-  <section class="section" style="background: rgba(7, 17, 31, 0.5);">
+  <section class="section" style="background: var(--bg-subtle);">
     <div class="container">
       <div class="section-header reveal-fade">
         <div class="eyebrow">Operating Principles</div>
@@ -239,25 +236,25 @@
 
       <div class="values-grid">
         <div class="glass-card reveal-fade delay-1">
-          <div style="font-size: 2rem; color: var(--accent-cyan); margin-bottom: 1rem;">🛡️</div>
-          <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 0.75rem;">Zero-Loss Cargo Security</h3>
-          <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+          <div style="font-size: 2rem; color: var(--brand-blue); margin-bottom: 1rem;">🛡️</div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--text-dark);">Zero-Loss Cargo Security</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
             Containerized locking mechanisms, active geofenced alerts, and comprehensive transit insurance safeguard every rupee of your cargo value.
           </p>
         </div>
 
         <div class="glass-card reveal-fade delay-2">
-          <div style="font-size: 2rem; color: var(--accent-orange); margin-bottom: 1rem;">⏱️</div>
-          <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 0.75rem;">Committed SLA Transit Times</h3>
-          <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+          <div style="font-size: 2rem; color: #D97706; margin-bottom: 1rem;">⏱️</div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--text-dark);">Committed SLA Transit Times</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
             Route optimization and double-driver rotation models guarantee that committed delivery windows are honored across all major interstate corridors.
           </p>
         </div>
 
         <div class="glass-card reveal-fade delay-3">
-          <div style="font-size: 2rem; color: var(--accent-cyan); margin-bottom: 1rem;">📑</div>
-          <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 0.75rem;">100% Digital Compliance</h3>
-          <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+          <div style="font-size: 2rem; color: var(--brand-blue); margin-bottom: 1rem;">📑</div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--text-dark);">100% Digital Compliance</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
             Automated E-Waybill validation, instant digital proof of delivery (e-POD), and centralized GST billing avoid highway clearance delays.
           </p>
         </div>
@@ -268,14 +265,14 @@
   <!-- ================= CTA BANNER ================= -->
   <section class="section">
     <div class="container">
-      <div class="glass-card reveal-fade" style="text-align: center; padding: 4rem 2rem; background: radial-gradient(circle at center, rgba(0, 217, 255, 0.12) 0%, rgba(7, 17, 31, 0.9) 80%);">
-        <h2 style="font-family: var(--font-heading); font-size: 2.2rem; margin-bottom: 1rem;">Partner With India's Trusted Freight Network</h2>
-        <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 2rem auto; font-size: 1.05rem;">
-          Discover how TILS can streamline your raw material procurement and finished goods distribution with custom fleet solutions.
+      <div class="glass-card reveal-fade" style="text-align: center; padding: 4rem 2rem; background: linear-gradient(135deg, #EFF6FF 0%, #FFFFFF 100%); border: 2px solid #BFDBFE;">
+        <h2 style="font-family: var(--font-heading); font-size: 2.2rem; margin-bottom: 1rem; color: var(--brand-navy);">Partner With India's Trusted Freight Network</h2>
+        <p style="color: var(--text-muted); max-width: 620px; margin: 0 auto 2rem auto; font-size: 1.05rem;">
+          Discover how TILS streamlines raw material procurement and finished goods distribution with custom container, FTL, and ODC solutions.
         </p>
         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-          <a href="contact.html" class="btn btn-orange">Request Corporate Proposal</a>
-          <a href="services.html" class="btn btn-secondary">Review Our Fleet Capabilities</a>
+          <a href="contact.html" class="btn btn-yellow">Request Freight Quote</a>
+          <a href="services.html" class="btn btn-secondary">Review Fleet Capabilities</a>
         </div>
       </div>
     </div>
@@ -329,7 +326,7 @@
             <div>
               <strong>Transport Of India Logistics Solution</strong><br>
               Door no.: 2525-2526, Trichy Road, Stanes Colony, Ondipudur (Post), Coimbatore - 641 016.<br>
-              <span style="color: var(--accent-cyan); font-size: 0.8rem;">Landmarks:</span> Before Shanthi Gear Aththi Vruksham Play School, Near Miraj Cinemas.
+              <span style="color: var(--brand-yellow); font-size: 0.8rem;">Landmarks:</span> Before Shanthi Gear Aththi Vruksham Play School, Near Miraj Cinemas.
             </div>
           </div>
 
