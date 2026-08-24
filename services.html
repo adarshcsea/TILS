@@ -13,8 +13,8 @@
 
   <!-- Open Graph & Social Sharing (WhatsApp, LinkedIn, Twitter) -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://tilsindia.com/">
-  <meta property="og:title" content="Transport Of India Logistics Solution (TILS)">
+  <meta property="og:url" content="https://tilsindia.com/services.html">
+  <meta property="og:title" content="Freight & Logistics Services | Transport Of India Logistics Solution (TILS)">
   <meta property="og:description" content="Pan-India Full Truckload (FTL), Less Than Truckload (LTL), Container, and Over-Dimensional Cargo (ODC) freight logistics.">
   <meta property="og:image" content="https://tilsindia.com/assets/logos/logo.svg">
 
@@ -52,109 +52,129 @@
 
   <style>
     .page-hero {
-      padding: 9rem 0 4rem 0;
+      padding: 8.5rem 0 3.5rem 0;
       text-align: center;
       position: relative;
       overflow: hidden;
+      background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+    }
+    .page-hero-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 4.2vw, 3.2rem);
+      font-weight: 800;
+      color: var(--brand-navy);
+      margin-bottom: 1.25rem;
     }
     .services-deep-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-      gap: 2.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
     }
     .service-badge {
       display: inline-block;
       font-size: 0.75rem;
       font-weight: 700;
-      padding: 0.25rem 0.75rem;
+      padding: 0.3rem 0.85rem;
       border-radius: var(--radius-full);
-      background: rgba(0, 217, 255, 0.1);
-      color: var(--accent-cyan);
-      border: 1px solid rgba(0, 217, 255, 0.3);
+      background: #EFF6FF;
+      color: var(--brand-blue);
+      border: 1px solid #DBEAFE;
       margin-bottom: 1rem;
+    }
+    .service-badge-yellow {
+      background: #FFFBEB;
+      color: #D97706;
+      border-color: #FDE68A;
     }
     .service-feature-list {
       margin: 1.25rem 0 1.75rem 0;
       display: flex;
       flex-direction: column;
-      gap: 0.6rem;
+      gap: 0.75rem;
     }
     .service-feature-item {
       display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.885rem;
-      color: var(--text-secondary);
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+      color: var(--text-body);
+      line-height: 1.5;
     }
     .service-feature-item svg {
-      color: var(--accent-cyan);
+      color: var(--brand-blue);
       flex-shrink: 0;
+      margin-top: 3px;
     }
     .specs-pill-group {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
-      margin-top: 1rem;
+      margin-top: 1.25rem;
       padding-top: 1rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-top: 1px solid var(--border-light);
     }
     .spec-pill {
-      font-size: 0.75rem;
-      padding: 0.2rem 0.6rem;
-      background: rgba(255, 255, 255, 0.05);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.25rem 0.65rem;
+      background: #F1F5F9;
       border-radius: 4px;
       color: var(--text-muted);
     }
+    @media (max-width: 768px) {
+      .page-hero {
+        padding-top: 6.5rem;
+      }
+      .services-deep-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
   </style>
 </head>
-<body class="bg-grid-pattern">
+<body>
 
-<!-- ================= SITE HEADER ================= -->
-<header class="site-header">
-  <div class="container nav-container">
-    <a href="index.html" class="brand-logo" aria-label="TILS Home">
-      <!-- Actual TILS Vector Logo -->
-      <img src="assets/logos/logo.svg" alt="TILS - Transport Of India Logistics Solution" class="logo-image" 
-           onerror="this.style.display='none'; document.getElementById('text-fallback').style.display='flex';">
-      
-      <!-- Text Fallback in case SVG path is missing -->
-      <div id="text-fallback" class="brand-text-fallback" style="display: none;">
-        <div class="logo-badge"><span class="tils-blue">TI</span><span class="tils-orange">LS</span></div>
-        <div class="brand-text">
-          <span class="brand-title">Transport Of India</span>
-          <span class="brand-subtitle">Logistics Solution</span>
+  <!-- ================= SITE HEADER ================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="TILS Home">
+        <img src="assets/logos/logo.svg" alt="TILS - Transport Of India Logistics Solution" class="logo-image" 
+             onerror="this.style.display='none'; document.getElementById('text-fallback').style.display='flex';">
+        
+        <div id="text-fallback" class="brand-text-fallback" style="display: none;">
+          <div class="logo-badge"><span class="tils-blue">TI</span><span class="tils-orange">LS</span></div>
+          <div class="brand-text">
+            <span class="brand-title">Transport Of India</span>
+            <span class="brand-subtitle">Logistics Solution</span>
+          </div>
         </div>
-      </div>
-    </a>
-
-    <!-- Desktop Navigation Links (Hidden on Mobile) -->
-    <nav class="nav-links" aria-label="Main Navigation">
-      <a href="index.html" class="nav-link active">Home</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="services.html" class="nav-link">Services</a>
-      <a href="solutions.html" class="nav-link">Solutions</a>
-      <a href="projects.html" class="nav-link">Case Studies</a>
-      <a href="team.html" class="nav-link">Team</a>
-      <a href="careers.html" class="nav-link">Careers</a>
-      <a href="faq.html" class="nav-link">FAQ</a>
-      <a href="contact.html" class="nav-link">Contact</a>
-    </nav>
-
-    <!-- Desktop CTA (Hidden on Mobile) -->
-    <div class="nav-cta">
-      <a href="contact.html" class="btn btn-primary" style="padding: 0.65rem 1.4rem; font-size: 0.85rem;">
-        Track Consignment
       </a>
-    </div>
 
-    <!-- Mobile Hamburger Toggle Button (Shown only on Mobile) -->
-    <button class="hamburger-btn" aria-label="Toggle navigation drawer" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </div>
-</header>
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="solutions.html" class="nav-link">Solutions</a>
+        <a href="projects.html" class="nav-link">Case Studies</a>
+        <a href="team.html" class="nav-link">Team</a>
+        <a href="careers.html" class="nav-link">Careers</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary" style="padding: 0.65rem 1.4rem; font-size: 0.85rem;">
+          Track Consignment
+        </a>
+      </div>
+
+      <button class="hamburger-btn" aria-label="Toggle navigation drawer" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
 
   <!-- ================= MOBILE NAVIGATION DRAWER ================= -->
   <div class="mobile-nav-overlay"></div>
@@ -165,9 +185,9 @@
     </div>
     
     <div class="mobile-nav-links">
-      <a href="index.html" class="mobile-nav-link active">Home</a>
+      <a href="index.html" class="mobile-nav-link">Home</a>
       <a href="about.html" class="mobile-nav-link">About TILS</a>
-      <a href="services.html" class="mobile-nav-link">Logistics Services</a>
+      <a href="services.html" class="mobile-nav-link active">Logistics Services</a>
       <a href="solutions.html" class="mobile-nav-link">Enterprise Solutions</a>
       <a href="projects.html" class="mobile-nav-link">Case Studies</a>
       <a href="team.html" class="mobile-nav-link">Leadership & Team</a>
@@ -179,6 +199,7 @@
     <div class="mobile-nav-footer">
       <div class="mobile-contact-pill">
         <span><strong>HQ:</strong> Ondipudur, Coimbatore</span>
+        <span><strong>Branch:</strong> Thiruchengode, Namakkal</span>
         <span><strong>Direct:</strong> +91 7845514762</span>
         <span><strong>Dispatch:</strong> cbe@tilsindia.com</span>
       </div>
@@ -189,11 +210,11 @@
   <!-- ================= PAGE HERO ================= -->
   <section class="page-hero">
     <div class="cyber-orb-bg" style="left: 50%; transform: translate(-50%, -50%);"></div>
-    <div class="container reveal-fade">
-      <div class="eyebrow eyebrow-orange">Specialized Heavy & Commercial Haulage</div>
-      <h1 class="page-hero-title">High-Velocity <span class="text-gradient">Logistics Services</span></h1>
+    <div class="container">
+      <div class="eyebrow eyebrow-yellow">Specialized Freight & Commercial Haulage</div>
+      <h1 class="page-hero-title">High-Velocity <span class="highlight-blue">Logistics Services</span></h1>
       <p class="section-subtitle" style="max-width: 740px; margin: 0 auto;">
-        From single dedicated multi-axle freight to complex scheduled inter-state supply corridors, explore TILS core logistics services engineered for industrial precision.
+        From dedicated multi-axle freight to complex scheduled inter-state supply corridors, explore TILS core logistics services engineered for industrial precision.
       </p>
     </div>
   </section>
@@ -204,167 +225,167 @@
       <div class="services-deep-grid">
 
         <!-- Service 1: FTL -->
-        <div class="glass-card reveal-fade delay-1">
+        <div class="glass-card">
           <span class="service-badge">Primary Road Freight</span>
-          <h3 style="font-family: var(--font-heading); font-size: 1.45rem; margin-bottom: 0.75rem;">Full Truckload (FTL) Operations</h3>
-          <p style="color: var(--text-secondary); font-size: 0.925rem; line-height: 1.6;">
-            Direct plant-to-warehouse and port-to-factory dedicated full truckload services with guaranteed zero transshipment handling.
+          <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 0.75rem; color: var(--text-dark);">Full Truckload (FTL) Operations</h3>
+          <p style="color: var(--text-body); font-size: 0.925rem; line-height: 1.6;">
+            Direct plant-to-warehouse and port-to-factory dedicated full truckload services with guaranteed zero transshipment handling across all vehicle configurations.
           </p>
           <ul class="service-feature-list">
             <li class="service-feature-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Closed body containers (20ft, 32ft MXL, 40ft HQ)</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Closed body containers (20ft, 24ft, 32ft MXL/SXL, 40ft HQ)</span>
             </li>
             <li class="service-feature-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Pre-calibrated transit schedules with double-driver crew</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Pre-calibrated transit schedules with double-driver crew models</span>
             </li>
             <li class="service-feature-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Real-time digital proof of delivery (e-POD) upon gate entry</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Instant digital proof of delivery (e-POD) upon gate check-in</span>
             </li>
           </ul>
           <div class="specs-pill-group">
             <span class="spec-pill">Payload: 9 to 35 MT</span>
             <span class="spec-pill">GPS Telematics: Standard</span>
-            <span class="spec-pill">Insurance: In-Transit Available</span>
+            <span class="spec-pill">Transit Insurance: Available</span>
           </div>
         </div>
 
         <!-- Service 2: Port & Multimodal -->
-        <div class="glass-card reveal-fade delay-2">
-          <span class="service-badge" style="color: var(--accent-orange); border-color: rgba(255,122,0,0.3); background: rgba(255,122,0,0.1);">Port Logistics</span>
-          <h3 style="font-family: var(--font-heading); font-size: 1.45rem; margin-bottom: 0.75rem;">Multimodal Port & Container Drayage</h3>
-          <p style="color: var(--text-secondary); font-size: 0.925rem; line-height: 1.6;">
-            Container handling connecting inland dry ports (ICDs) and industrial corridors directly to major ocean terminals across India.
+        <div class="glass-card">
+          <span class="service-badge service-badge-yellow">Port Logistics</span>
+          <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 0.75rem; color: var(--text-dark);">Multimodal Port & Container Drayage</h3>
+          <p style="color: var(--text-body); font-size: 0.925rem; line-height: 1.6;">
+            Dedicated container vehicle handling connecting inland dry ports (ICDs) and manufacturing clusters directly to maritime terminals across India.
           </p>
           <ul class="service-feature-list">
             <li class="service-feature-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
               <span>Tuticorin, Chennai Port, Cochin Port, & Nhava Sheva (JNPT)</span>
             </li>
             <li class="service-feature-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
               <span>Customs seal integrity verification & port gate-in coordination</span>
             </li>
             <li class="service-feature-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
               <span>Handling 20ft / 40ft standard and heavy open-top maritime boxes</span>
             </li>
           </ul>
           <div class="specs-pill-group">
             <span class="spec-pill">Port Gate Assistance</span>
-            <span class="spec-pill">Detention Time Minimization</span>
+            <span class="spec-pill">Detention Time Control</span>
             <span class="spec-pill">E-Waybill Auto-Sync</span>
           </div>
         </div>
 
         <!-- Service 3: ODC & Heavy Engineering -->
-        <div class="glass-card reveal-fade delay-3">
+        <div class="glass-card">
           <span class="service-badge">Heavy Haulage</span>
-          <h3 style="font-family: var(--font-heading); font-size: 1.45rem; margin-bottom: 0.75rem;">Over-Dimensional Cargo (ODC)</h3>
-          <p style="color: var(--text-secondary); font-size: 0.925rem; line-height: 1.6;">
-            Engineered transport solutions for oversized industrial equipment, hydraulic presses, wind power parts, and structural steel beams.
+          <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 0.75rem; color: var(--text-dark);">Over-Dimensional Cargo (ODC)</h3>
+          <p style="color: var(--text-body); font-size: 0.925rem; line-height: 1.6;">
+            Engineered transport solutions for oversized industrial machinery, hydraulic presses, power transformers, and structural fabrication units.
           </p>
           <ul class="service-feature-list">
             <li class="service-feature-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Hydraulic axle pullers and low-bed/semi-low-bed trailers</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Hydraulic axle modular pullers and low-bed/semi-low-bed trailers</span>
             </li>
             <li class="service-feature-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
               <span>Civil route surveys, bridge load assessments, & pilot escorts</span>
             </li>
             <li class="service-feature-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
               <span>Statutory clearances from state & national highway authorities</span>
             </li>
           </ul>
           <div class="specs-pill-group">
             <span class="spec-pill">Payload: Up to 120 MT</span>
-            <span class="spec-pill">Route Engineered</span>
-            <span class="spec-pill">Dedicated Escort Teams</span>
+            <span class="spec-pill">Engineered Route Survey</span>
+            <span class="spec-pill">Escort Teams</span>
           </div>
         </div>
 
         <!-- Service 4: Express Industrial Logistics -->
-        <div class="glass-card reveal-fade delay-1">
-          <span class="service-badge">Time-Critical</span>
-          <h3 style="font-family: var(--font-heading); font-size: 1.45rem; margin-bottom: 0.75rem;">Express Corridors & Just-In-Time (JIT)</h3>
-          <p style="color: var(--text-secondary); font-size: 0.925rem; line-height: 1.6;">
-            Ultra-critical transit services serving automotive assembly lines and export textile deadlines where line stoppage is not an option.
+        <div class="glass-card">
+          <span class="service-badge service-badge-yellow">Time-Critical</span>
+          <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 0.75rem; color: var(--text-dark);">Express Corridors & Just-In-Time (JIT)</h3>
+          <p style="color: var(--text-body); font-size: 0.925rem; line-height: 1.6;">
+            Time-sensitive freight transit serving automotive OEM assembly lines and export textile deadlines where plant downtime is not an option.
           </p>
           <ul class="service-feature-list">
             <li class="service-feature-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Dedicated dispatch team in Coimbatore, Chennai, and Pune</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Dedicated dispatch desks in Coimbatore, Chennai, and Pune</span>
             </li>
             <li class="service-feature-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Continuous dual-driver continuous highway shifts</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Continuous dual-driver interstate express rotations</span>
             </li>
             <li class="service-feature-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Real-time geo-fence alerts for departure and arrival triggers</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Automated geofence ingress/egress triggers for plant inventory control</span>
             </li>
           </ul>
           <div class="specs-pill-group">
-            <span class="spec-pill">Priority Highway Pass</span>
-            <span class="spec-pill">99.8% JIT Reliability</span>
+            <span class="spec-pill">Priority Corridor Pass</span>
+            <span class="spec-pill">99.8% On-Time SLA</span>
           </div>
         </div>
 
         <!-- Service 5: Warehousing & Cross-Docking -->
-        <div class="glass-card reveal-fade delay-2">
+        <div class="glass-card">
           <span class="service-badge">Storage & Sorting</span>
-          <h3 style="font-family: var(--font-heading); font-size: 1.45rem; margin-bottom: 0.75rem;">Industrial Cross-Docking & Hub Storage</h3>
-          <p style="color: var(--text-secondary); font-size: 0.925rem; line-height: 1.6;">
-            Secure consolidation and de-consolidation points located along major highway junctions to optimize regional distribution runs.
+          <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 0.75rem; color: var(--text-dark);">Industrial Cross-Docking & Hub Storage</h3>
+          <p style="color: var(--text-body); font-size: 0.925rem; line-height: 1.6;">
+            Secure consolidation and de-consolidation points along primary transit arteries to optimize multi-destination distribution runs.
           </p>
           <ul class="service-feature-list">
             <li class="service-feature-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Strategically located hubs in Coimbatore, Hosur, & Hyderabad</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Strategic transit hubs in Coimbatore, Hosur, & Hyderabad</span>
             </li>
             <li class="service-feature-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Heavy forklift material handling up to 15 MT individual units</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Forklift and heavy crane loading up to 15 MT individual units</span>
             </li>
             <li class="service-feature-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>24/7 CCTV surveillance and security staff</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>24/7 CCTV surveillance, digital inventory log, and gate control</span>
             </li>
           </ul>
           <div class="specs-pill-group">
-            <span class="spec-pill">Cross-Docking</span>
-            <span class="spec-pill">Short-Term Buffer Storage</span>
+            <span class="spec-pill">Cross-Docking Efficiency</span>
+            <span class="spec-pill">Short-Term Staging Buffer</span>
           </div>
         </div>
 
         <!-- Service 6: 3PL & Contract Logistics -->
-        <div class="glass-card reveal-fade delay-3">
-          <span class="service-badge" style="color: var(--accent-orange); border-color: rgba(255,122,0,0.3); background: rgba(255,122,0,0.1);">Contract Logistics</span>
-          <h3 style="font-family: var(--font-heading); font-size: 1.45rem; margin-bottom: 0.75rem;">Dedicated Enterprise Fleet Leasing</h3>
-          <p style="color: var(--text-secondary); font-size: 0.925rem; line-height: 1.6;">
-            Long-term dedicated vehicle contracts with customized branding, dedicated driver cadres, and customized ERP telemetry integrations.
+        <div class="glass-card">
+          <span class="service-badge service-badge-yellow">Contract Logistics</span>
+          <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 0.75rem; color: var(--text-dark);">Dedicated Enterprise Fleet Leasing</h3>
+          <p style="color: var(--text-body); font-size: 0.925rem; line-height: 1.6;">
+            Long-term dedicated vehicle contracts with customized operations, dedicated driver cadres, and ERP-integrated dispatch telemetry.
           </p>
           <ul class="service-feature-list">
             <li class="service-feature-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Guaranteed asset availability 365 days a year</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Guaranteed fleet asset availability 365 days a year</span>
             </li>
             <li class="service-feature-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Customized vehicle livery with client branding</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Dedicated Key Account Coordinator based in Coimbatore HQ</span>
             </li>
             <li class="service-feature-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Dedicated Key Account Manager based in Coimbatore HQ</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Transparent consolidated monthly GST invoicing with full digital e-PODs</span>
             </li>
           </ul>
           <div class="specs-pill-group">
-            <span class="spec-pill">Annual SLA</span>
-            <span class="spec-pill">Fixed Commercial Rates</span>
+            <span class="spec-pill">Annual SLA Commitments</span>
+            <span class="spec-pill">Fixed Rate Contracts</span>
           </div>
         </div>
 
@@ -375,14 +396,14 @@
   <!-- ================= CTA BANNER ================= -->
   <section class="section">
     <div class="container">
-      <div class="glass-card reveal-fade" style="text-align: center; padding: 4rem 2rem; background: radial-gradient(circle at center, rgba(0, 217, 255, 0.12) 0%, rgba(7, 17, 31, 0.9) 80%);">
-        <h2 style="font-family: var(--font-heading); font-size: 2.2rem; margin-bottom: 1rem;">Require a Customized Logistics Contract?</h2>
-        <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 2rem auto; font-size: 1.05rem;">
-          Connect with our freight engineering desk on Trichy Road, Coimbatore for custom freight pricing and capacity allocation.
+      <div class="glass-card" style="text-align: center; padding: 3.5rem 2rem; background: linear-gradient(135deg, #EFF6FF 0%, #FFFFFF 100%); border: 2px solid #BFDBFE;">
+        <h2 style="font-family: var(--font-heading); font-size: 2.2rem; margin-bottom: 1rem; color: var(--brand-navy);">Require a Customized Logistics Contract?</h2>
+        <p style="color: var(--text-body); max-width: 620px; margin: 0 auto 2rem auto; font-size: 1.05rem;">
+          Connect with our freight operations desk on Trichy Road, Coimbatore for route viability studies, custom pricing, and capacity allocation.
         </p>
         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-          <a href="contact.html" class="btn btn-primary">Book Consultation</a>
-          <a href="solutions.html" class="btn btn-secondary">Explore Fleet Technology</a>
+          <a href="contact.html" class="btn btn-yellow">Request Freight Estimate</a>
+          <a href="solutions.html" class="btn btn-secondary">Explore Telematics Solutions</a>
         </div>
       </div>
     </div>
@@ -436,7 +457,7 @@
             <div>
               <strong>Transport Of India Logistics Solution</strong><br>
               Door no.: 2525-2526, Trichy Road, Stanes Colony, Ondipudur (Post), Coimbatore - 641 016.<br>
-              <span style="color: var(--accent-cyan); font-size: 0.8rem;">Landmarks:</span> Before Shanthi Gear Aththi Vruksham Play School, Near Miraj Cinemas.
+              <span style="color: var(--brand-yellow); font-size: 0.8rem;">Landmarks:</span> Before Shanthi Gear Aththi Vruksham Play School, Near Miraj Cinemas.
             </div>
           </div>
 
