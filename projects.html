@@ -13,8 +13,8 @@
 
   <!-- Open Graph & Social Sharing (WhatsApp, LinkedIn, Twitter) -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://tilsindia.com/">
-  <meta property="og:title" content="Transport Of India Logistics Solution (TILS)">
+  <meta property="og:url" content="https://tilsindia.com/projects.html">
+  <meta property="og:title" content="Industrial Case Studies & Projects | Transport Of India Logistics Solution (TILS)">
   <meta property="og:description" content="Pan-India Full Truckload (FTL), Less Than Truckload (LTL), Container, and Over-Dimensional Cargo (ODC) freight logistics.">
   <meta property="og:image" content="https://tilsindia.com/assets/logos/logo.svg">
 
@@ -52,26 +52,47 @@
 
   <style>
     .page-hero {
-      padding: 9rem 0 4rem 0;
+      padding: 8.5rem 0 3.5rem 0;
       text-align: center;
       position: relative;
       overflow: hidden;
+      background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+    }
+    .page-hero-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 4.2vw, 3.2rem);
+      font-weight: 800;
+      color: var(--brand-navy);
+      margin-bottom: 1.25rem;
     }
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-      gap: 2.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
     }
     .case-card {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       height: 100%;
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+    }
+    .case-card:hover {
+      transform: translateY(-4px);
+      border-color: #BFDBFE;
+      box-shadow: var(--shadow-lg);
     }
     .case-meta {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
       margin-bottom: 1.25rem;
     }
     .case-tag {
@@ -79,12 +100,22 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: var(--accent-cyan);
+      padding: 0.3rem 0.85rem;
+      border-radius: var(--radius-full);
+      background: #EFF6FF;
+      color: var(--brand-blue);
+      border: 1px solid #DBEAFE;
+    }
+    .case-tag-yellow {
+      background: #FFFBEB;
+      color: #D97706;
+      border-color: #FDE68A;
     }
     .case-route {
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       color: var(--text-muted);
       font-family: var(--font-heading);
+      font-weight: 600;
     }
     .metric-callout-grid {
       display: grid;
@@ -92,35 +123,54 @@
       gap: 1rem;
       margin: 1.5rem 0;
       padding: 1.25rem;
-      background: rgba(255, 255, 255, 0.03);
+      background: #F8FAFC;
       border-radius: var(--radius-md);
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-light);
     }
     .metric-callout-num {
       font-family: var(--font-heading);
       font-size: 1.5rem;
       font-weight: 800;
-      color: var(--accent-cyan);
+      color: var(--brand-blue);
       line-height: 1.1;
     }
     .metric-callout-label {
-      font-size: 0.75rem;
-      color: var(--text-secondary);
-      margin-top: 0.25rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.3rem;
+      font-weight: 500;
+    }
+
+    @media (max-width: 900px) {
+      .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.75rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .page-hero {
+        padding-top: 6.5rem;
+      }
+      .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .case-card {
+        padding: 1.5rem;
+      }
     }
   </style>
 </head>
-<body class="bg-grid-pattern">
+<body>
 
 <!-- ================= SITE HEADER ================= -->
 <header class="site-header">
   <div class="container nav-container">
     <a href="index.html" class="brand-logo" aria-label="TILS Home">
-      <!-- Actual TILS Vector Logo -->
       <img src="assets/logos/logo.svg" alt="TILS - Transport Of India Logistics Solution" class="logo-image" 
            onerror="this.style.display='none'; document.getElementById('text-fallback').style.display='flex';">
       
-      <!-- Text Fallback in case SVG path is missing -->
       <div id="text-fallback" class="brand-text-fallback" style="display: none;">
         <div class="logo-badge"><span class="tils-blue">TI</span><span class="tils-orange">LS</span></div>
         <div class="brand-text">
@@ -132,11 +182,11 @@
 
     <!-- Desktop Navigation Links (Hidden on Mobile) -->
     <nav class="nav-links" aria-label="Main Navigation">
-      <a href="index.html" class="nav-link active">Home</a>
+      <a href="index.html" class="nav-link">Home</a>
       <a href="about.html" class="nav-link">About</a>
       <a href="services.html" class="nav-link">Services</a>
       <a href="solutions.html" class="nav-link">Solutions</a>
-      <a href="projects.html" class="nav-link">Case Studies</a>
+      <a href="projects.html" class="nav-link active">Case Studies</a>
       <a href="team.html" class="nav-link">Team</a>
       <a href="careers.html" class="nav-link">Careers</a>
       <a href="faq.html" class="nav-link">FAQ</a>
@@ -168,11 +218,11 @@
     </div>
     
     <div class="mobile-nav-links">
-      <a href="index.html" class="mobile-nav-link active">Home</a>
+      <a href="index.html" class="mobile-nav-link">Home</a>
       <a href="about.html" class="mobile-nav-link">About TILS</a>
       <a href="services.html" class="mobile-nav-link">Logistics Services</a>
       <a href="solutions.html" class="mobile-nav-link">Enterprise Solutions</a>
-      <a href="projects.html" class="mobile-nav-link">Case Studies</a>
+      <a href="projects.html" class="mobile-nav-link active">Case Studies</a>
       <a href="team.html" class="mobile-nav-link">Leadership & Team</a>
       <a href="careers.html" class="mobile-nav-link">Careers</a>
       <a href="faq.html" class="mobile-nav-link">FAQ</a>
@@ -182,6 +232,7 @@
     <div class="mobile-nav-footer">
       <div class="mobile-contact-pill">
         <span><strong>HQ:</strong> Ondipudur, Coimbatore</span>
+        <span><strong>Branch:</strong> Thiruchengode, Namakkal</span>
         <span><strong>Direct:</strong> +91 7845514762</span>
         <span><strong>Dispatch:</strong> cbe@tilsindia.com</span>
       </div>
@@ -193,8 +244,8 @@
   <section class="page-hero">
     <div class="cyber-orb-bg" style="left: 50%; transform: translate(-50%, -50%);"></div>
     <div class="container reveal-fade">
-      <div class="eyebrow eyebrow-orange">Verified Operations & Case Studies</div>
-      <h1 class="page-hero-title">Industrial Scale, <span class="text-gradient">Engineered Results</span></h1>
+      <div class="eyebrow eyebrow-yellow">Verified Operations & Case Studies</div>
+      <h1 class="page-hero-title">Industrial Scale, <span class="highlight-blue">Engineered Results</span></h1>
       <p class="section-subtitle" style="max-width: 720px; margin: 0 auto;">
         Real-world supply chain execution across textile machinery, automotive components, multi-modal port containers, and heavy industrial assemblies.
       </p>
@@ -207,19 +258,19 @@
       <div class="projects-grid">
 
         <!-- Case 1: Heavy Textile Machinery -->
-        <div class="glass-card case-card reveal-fade delay-1">
+        <div class="case-card reveal-fade delay-1">
           <div>
             <div class="case-meta">
               <span class="case-tag">Textile & Heavy Engineering</span>
               <span class="case-route">Coimbatore &rarr; Ahmedabad</span>
             </div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.35rem; margin-bottom: 0.75rem; color: #fff;">
+            <h3 style="font-family: var(--font-heading); font-size: 1.35rem; margin-bottom: 0.75rem; color: var(--text-dark);">
               Zero-Vibration Transit of High-Precision Spinning Frames
             </h3>
-            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">
+            <p style="color: var(--text-body); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">
               <strong>Challenge:</strong> Transporting 24 units of computerized textile spinning machinery sensitive to shock and highway vibration across 1,600 km without recalibration loss.
             </p>
-            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+            <p style="color: var(--text-body); font-size: 0.9rem; line-height: 1.6;">
               <strong>TILS Solution:</strong> Deployed air-suspension multi-axle closed trailers equipped with dual-axis accelerometer telematics and dedicated route piloting.
             </p>
           </div>
@@ -242,19 +293,19 @@
         </div>
 
         <!-- Case 2: Automotive JIT Line Feeder -->
-        <div class="glass-card case-card reveal-fade delay-2">
+        <div class="case-card reveal-fade delay-2">
           <div>
             <div class="case-meta">
-              <span class="case-tag" style="color: var(--accent-orange);">Automotive Tier-1</span>
+              <span class="case-tag case-tag-yellow">Automotive Tier-1</span>
               <span class="case-route">Hosur &rarr; Pune Cluster</span>
             </div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.35rem; margin-bottom: 0.75rem; color: #fff;">
+            <h3 style="font-family: var(--font-heading); font-size: 1.35rem; margin-bottom: 0.75rem; color: var(--text-dark);">
               Just-In-Time Assembly Corridor for Precision Engine Castings
             </h3>
-            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">
+            <p style="color: var(--text-body); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">
               <strong>Challenge:</strong> Maintaining daily 18-hour turnaround cycles for foundry engine blocks to prevent assembly line stoppages at a Tier-1 OEM plant.
             </p>
-            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+            <p style="color: var(--text-body); font-size: 0.9rem; line-height: 1.6;">
               <strong>TILS Solution:</strong> Implemented a 24/7 dual-driver slip-seat convoy model paired with real-time automated geofenced docking notifications.
             </p>
           </div>
@@ -262,11 +313,11 @@
           <div>
             <div class="metric-callout-grid">
               <div>
-                <div class="metric-callout-num" style="color: var(--accent-orange);">99.85%</div>
+                <div class="metric-callout-num" style="color: #D97706;">99.85%</div>
                 <div class="metric-callout-label">On-Time Dock Ingress</div>
               </div>
               <div>
-                <div class="metric-callout-num" style="color: var(--accent-orange);">1,400+</div>
+                <div class="metric-callout-num" style="color: #D97706;">1,400+</div>
                 <div class="metric-callout-label">Monthly Tons Moved</div>
               </div>
             </div>
@@ -277,19 +328,19 @@
         </div>
 
         <!-- Case 3: Maritime Export Container Drayage -->
-        <div class="glass-card case-card reveal-fade delay-3">
+        <div class="case-card reveal-fade delay-3">
           <div>
             <div class="case-meta">
               <span class="case-tag">Maritime Export</span>
               <span class="case-route">Tirupur &rarr; Tuticorin / Cochin</span>
             </div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.35rem; margin-bottom: 0.75rem; color: #fff;">
+            <h3 style="font-family: var(--font-heading); font-size: 1.35rem; margin-bottom: 0.75rem; color: var(--text-dark);">
               Express Port Cut-Off Ingress for Global Apparel Shipments
             </h3>
-            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">
-              <strong>Challenge:</strong> Meeting tight vessel cut-off windows during severe monsoon weather and seasonal port congestion.
+            <p style="color: var(--text-body); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">
+              <strong>Challenge:</strong> Meeting tight vessel cut-off windows during severe weather and seasonal maritime terminal gate bottlenecks.
             </p>
-            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+            <p style="color: var(--text-body); font-size: 0.9rem; line-height: 1.6;">
               <strong>TILS Solution:</strong> Dedicated container trailers with automated E-Waybill processing and priority port yard gate-in coordination.
             </p>
           </div>
@@ -318,13 +369,13 @@
   <!-- ================= CTA BANNER ================= -->
   <section class="section">
     <div class="container">
-      <div class="glass-card reveal-fade" style="text-align: center; padding: 4rem 2rem; background: radial-gradient(circle at center, rgba(0, 217, 255, 0.12) 0%, rgba(7, 17, 31, 0.9) 80%);">
-        <h2 style="font-family: var(--font-heading); font-size: 2.2rem; margin-bottom: 1rem;">Have a Demanding Freight Challenge?</h2>
-        <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 2rem auto; font-size: 1.05rem;">
+      <div class="glass-card reveal-fade" style="text-align: center; padding: 3.5rem 2rem; background: linear-gradient(135deg, #EFF6FF 0%, #FFFFFF 100%); border: 2px solid #BFDBFE;">
+        <h2 style="font-family: var(--font-heading); font-size: 2.2rem; margin-bottom: 1rem; color: var(--brand-navy);">Have a Demanding Freight Challenge?</h2>
+        <p style="color: var(--text-body); max-width: 620px; margin: 0 auto 2rem auto; font-size: 1.05rem;">
           Our logistics engineers analyze your lane requirements, axle weights, and delivery commitments to build a zero-failure transit blueprint.
         </p>
         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-          <a href="contact.html" class="btn btn-primary">Submit Lane Proposal</a>
+          <a href="contact.html" class="btn btn-yellow">Submit Lane Proposal</a>
           <a href="team.html" class="btn btn-secondary">Meet Our Operations Team</a>
         </div>
       </div>
@@ -379,7 +430,7 @@
             <div>
               <strong>Transport Of India Logistics Solution</strong><br>
               Door no.: 2525-2526, Trichy Road, Stanes Colony, Ondipudur (Post), Coimbatore - 641 016.<br>
-              <span style="color: var(--accent-cyan); font-size: 0.8rem;">Landmarks:</span> Before Shanthi Gear Aththi Vruksham Play School, Near Miraj Cinemas.
+              <span style="color: var(--brand-yellow); font-size: 0.8rem;">Landmarks:</span> Before Shanthi Gear Aththi Vruksham Play School, Near Miraj Cinemas.
             </div>
           </div>
 
