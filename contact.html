@@ -331,65 +331,67 @@
             <span><strong>Request Received!</strong> A TILS logistics coordinator is reviewing your corridor parameters and will call your primary line within 15 minutes.</span>
           </div>
 
-          <form data-validate novalidate>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="clientName">Full Name / Contact Person *</label>
-                <input type="text" id="clientName" class="form-control" placeholder="e.g. S. Ramachandran" required>
-                <div class="input-error-msg">Please enter your name.</div>
-              </div>
-              <div class="form-group">
-                <label for="companyName">Enterprise / Company Name *</label>
-                <input type="text" id="companyName" class="form-control" placeholder="e.g. Textech Engineering Ltd" required>
-                <div class="input-error-msg">Please enter company name.</div>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="clientEmail">Business Email *</label>
-                <input type="email" id="clientEmail" class="form-control" placeholder="ram@company.com" required>
-                <div class="input-error-msg">Please enter a valid email address.</div>
-              </div>
-              <div class="form-group">
-                <label for="clientPhone">Mobile Phone *</label>
-                <input type="tel" id="clientPhone" class="form-control" placeholder="e.g. 9876543210" required>
-                <div class="input-error-msg">Please enter your phone number.</div>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="originCity">Origin City / Hub *</label>
-                <input type="text" id="originCity" class="form-control" placeholder="e.g. Coimbatore" required>
-                <div class="input-error-msg">Please enter origin.</div>
-              </div>
-              <div class="form-group">
-                <label for="destCity">Destination City / Port *</label>
-                <input type="text" id="destCity" class="form-control" placeholder="e.g. JNPT Nhava Sheva" required>
-                <div class="input-error-msg">Please enter destination.</div>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="cargoType">Cargo Type & Estimated Payload</label>
-              <select id="cargoType" class="form-control">
-                <option value="FTL_Closed">Full Truckload (FTL) - Closed Container (32ft MXL)</option>
-                <option value="FTL_Trailer">Full Truckload (FTL) - Flatbed / High-Cube 40ft</option>
-                <option value="Port_Container">Port Container Drayage (20ft / 40ft)</option>
-                <option value="ODC_Heavy">Over-Dimensional Cargo (ODC) / Heavy Machinery</option>
-                <option value="Other">Custom Corporate Dedicated Fleet</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="message">Consignment Specifications / Dispatch Date</label>
-              <textarea id="message" rows="3" class="form-control" placeholder="Mention tentative load date, special handling requirements, or recurring contract frequency..."></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-orange" style="width: 100%;">
-              Submit Freight Dispatch Request
-            </button>
+          <form action="https://api.web3forms.com/submit" method="POST">
+          <!-- 1. Your Web3Forms Access Key -->
+          <input type="hidden" name="access_key" value="c6cb9fdd-d5f5-47c3-8f43-31bef7cd16bd">
+          
+          <!-- 2. Primary Recipient (cbe@tilsindia.com) & Carbon Copy (tcd@tilsindia.com) -->
+          <input type="hidden" name="from_name" value="TILS Web Portal">
+          <input type="hidden" name="subject" value="New Consignment Quote Request - TILS">
+          <input type="hidden" name="cc" value="tcd@tilsindia.com">
+          
+          <!-- Form Fields -->
+          <div class="form-grid">
+          <div class="form-group">
+          <label>Full Name / Contact Person *</label>
+          <input type="text" name="Contact_Person" placeholder="e.g. S. Ramachandran" required>
+          </div>
+          
+          <div class="form-group">
+          <label>Enterprise / Company Name *</label>
+          <input type="text" name="Company_Name" placeholder="e.g. Textech Engineering Ltd" required>
+          </div>
+          
+          <div class="form-group">
+          <label>Business Email *</label>
+          <input type="email" name="email" placeholder="ram@company.com" required>
+          </div>
+          
+          <div class="form-group">
+          <label>Mobile Phone *</label>
+          <input type="tel" name="phone" placeholder="e.g. 9876543210" required>
+          </div>
+          
+          <div class="form-group">
+          <label>Origin City / Hub *</label>
+          <input type="text" name="Origin" placeholder="e.g. Coimbatore" required>
+          </div>
+          
+          <div class="form-group">
+          <label>Destination City / Port *</label>
+          <input type="text" name="Destination" placeholder="e.g. JNPT Nhava Sheva" required>
+          </div>
+          
+          <div class="form-group" style="grid-column: 1 / -1;">
+          <label>Cargo Type & Estimated Payload</label>
+          <select name="Cargo_Payload_Type">
+            <option value="Full Truckload (FTL) - Closed Container (32ft MXL)">Full Truckload (FTL) - Closed Container (32ft MXL)</option>
+            <option value="Full Truckload (FTL) - 20ft / 24ft / 40ft HQ">Full Truckload (FTL) - 20ft / 24ft / 40ft HQ</option>
+            <option value="Over-Dimensional Cargo (ODC) - Low Bed / Semi-Low Bed">Over-Dimensional Cargo (ODC) - Low Bed / Semi-Low Bed</option>
+            <option value="Less Than Truckload (LTL) Industrial Consolidation">Less Than Truckload (LTL) Industrial Consolidation</option>
+            <option value="Port Container Drayage (Export / Import)">Port Container Drayage (Export / Import)</option>
+          </select>
+          </div>
+          
+          <div class="form-group" style="grid-column: 1 / -1;">
+          <label>Consignment Specifications / Dispatch Date</label>
+          <textarea name="Consignment_Details" rows="4" placeholder="Mention tentative load date, cargo nature, or special handling requirements..."></textarea>
+          </div>
+          </div>
+          
+          <button type="submit" class="btn btn-yellow" style="width: 100%; margin-top: 1.5rem; font-weight: 700; font-size: 1rem;">
+          Submit Freight Dispatch Request
+          </button>
           </form>
         </div>
 
