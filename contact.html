@@ -318,82 +318,109 @@
         </div>
 
         <!-- Column 2: Interactive Frontend Form -->
-        <div class="glass-card reveal-fade delay-1" style="padding: 2.5rem;">
-          <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 0.5rem; color: #fff;">
-            Request Freight Estimate & Booking
-          </h3>
-          <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">
-            Provide your route details and cargo weight for instant rate assessment from our Coimbatore dispatch desk.
-          </p>
+        <!-- Form Success / Error Banners -->
+<div id="form-success" class="form-success-banner" style="display: none;">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+  <span><strong>Request Received!</strong> A TILS coordinator is reviewing your corridor parameters and will call within 15 minutes.</span>
+</div>
 
-          <div class="form-success-banner">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span><strong>Request Received!</strong> A TILS logistics coordinator is reviewing your corridor parameters and will call your primary line within 15 minutes.</span>
-          </div>
+<form id="tils-booking-form">
+  <div class="form-grid">
+    <div class="form-group">
+      <label>Full Name / Contact Person *</label>
+      <input type="text" id="contact_person" name="Contact_Person" placeholder="e.g. S. Ramachandran" required>
+    </div>
 
-          <form action="https://api.web3forms.com/submit" method="POST">
-          <!-- 1. Your Web3Forms Access Key -->
-          <input type="hidden" name="access_key" value="c6cb9fdd-d5f5-47c3-8f43-31bef7cd16bd">
-          
-          <!-- 2. Primary Recipient (cbe@tilsindia.com) & Carbon Copy (tcd@tilsindia.com) -->
-          <input type="hidden" name="from_name" value="TILS Web Portal">
-          <input type="hidden" name="subject" value="New Consignment Quote Request - TILS">
-          <input type="hidden" name="cc" value="tcd@tilsindia.com">
-          
-          <!-- Form Fields -->
-          <div class="form-grid">
-          <div class="form-group">
-          <label>Full Name / Contact Person *</label>
-          <input type="text" name="Contact_Person" placeholder="e.g. S. Ramachandran" required>
-          </div>
-          
-          <div class="form-group">
-          <label>Enterprise / Company Name *</label>
-          <input type="text" name="Company_Name" placeholder="e.g. Textech Engineering Ltd" required>
-          </div>
-          
-          <div class="form-group">
-          <label>Business Email *</label>
-          <input type="email" name="email" placeholder="ram@company.com" required>
-          </div>
-          
-          <div class="form-group">
-          <label>Mobile Phone *</label>
-          <input type="tel" name="phone" placeholder="e.g. 9876543210" required>
-          </div>
-          
-          <div class="form-group">
-          <label>Origin City / Hub *</label>
-          <input type="text" name="Origin" placeholder="e.g. Coimbatore" required>
-          </div>
-          
-          <div class="form-group">
-          <label>Destination City / Port *</label>
-          <input type="text" name="Destination" placeholder="e.g. JNPT Nhava Sheva" required>
-          </div>
-          
-          <div class="form-group" style="grid-column: 1 / -1;">
-          <label>Cargo Type & Estimated Payload</label>
-          <select name="Cargo_Payload_Type">
-            <option value="Full Truckload (FTL) - Closed Container (32ft MXL)">Full Truckload (FTL) - Closed Container (32ft MXL)</option>
-            <option value="Full Truckload (FTL) - 20ft / 24ft / 40ft HQ">Full Truckload (FTL) - 20ft / 24ft / 40ft HQ</option>
-            <option value="Over-Dimensional Cargo (ODC) - Low Bed / Semi-Low Bed">Over-Dimensional Cargo (ODC) - Low Bed / Semi-Low Bed</option>
-            <option value="Less Than Truckload (LTL) Industrial Consolidation">Less Than Truckload (LTL) Industrial Consolidation</option>
-            <option value="Port Container Drayage (Export / Import)">Port Container Drayage (Export / Import)</option>
-          </select>
-          </div>
-          
-          <div class="form-group" style="grid-column: 1 / -1;">
-          <label>Consignment Specifications / Dispatch Date</label>
-          <textarea name="Consignment_Details" rows="4" placeholder="Mention tentative load date, cargo nature, or special handling requirements..."></textarea>
-          </div>
-          </div>
-          
-          <button type="submit" class="btn btn-yellow" style="width: 100%; margin-top: 1.5rem; font-weight: 700; font-size: 1rem;">
-          Submit Freight Dispatch Request
-          </button>
-          </form>
-        </div>
+    <div class="form-group">
+      <label>Enterprise / Company Name *</label>
+      <input type="text" id="company_name" name="Company_Name" placeholder="e.g. Textech Engineering Ltd" required>
+    </div>
+
+    <div class="form-group">
+      <label>Business Email *</label>
+      <input type="email" id="email" name="email" placeholder="ram@company.com" required>
+    </div>
+
+    <div class="form-group">
+      <label>Mobile Phone *</label>
+      <input type="tel" id="phone" name="phone" placeholder="e.g. 9876543210" required>
+    </div>
+
+    <div class="form-group">
+      <label>Origin City / Hub *</label>
+      <input type="text" id="origin" name="Origin" placeholder="e.g. Coimbatore" required>
+    </div>
+
+    <div class="form-group">
+      <label>Destination City / Port *</label>
+      <input type="text" id="destination" name="Destination" placeholder="e.g. JNPT Nhava Sheva" required>
+    </div>
+
+    <div class="form-group" style="grid-column: 1 / -1;">
+      <label>Cargo Type & Estimated Payload</label>
+      <select id="cargo_type" name="Cargo_Payload_Type">
+        <option value="Full Truckload (FTL) - Closed Container (32ft MXL)">Full Truckload (FTL) - Closed Container (32ft MXL)</option>
+        <option value="Full Truckload (FTL) - 20ft / 24ft / 40ft HQ">Full Truckload (FTL) - 20ft / 24ft / 40ft HQ</option>
+        <option value="Over-Dimensional Cargo (ODC) - Low Bed / Semi-Low Bed">Over-Dimensional Cargo (ODC) - Low Bed / Semi-Low Bed</option>
+        <option value="Less Than Truckload (LTL) Industrial Consolidation">Less Than Truckload (LTL) Industrial Consolidation</option>
+        <option value="Port Container Drayage (Export / Import)">Port Container Drayage (Export / Import)</option>
+      </select>
+    </div>
+
+    <div class="form-group" style="grid-column: 1 / -1;">
+      <label>Consignment Specifications / Dispatch Date</label>
+      <textarea id="consignment_details" name="Consignment_Details" rows="4" placeholder="Mention tentative load date, cargo nature, or special handling requirements..."></textarea>
+    </div>
+  </div>
+
+  <button type="submit" id="submit-btn" class="btn btn-yellow" style="width: 100%; margin-top: 1.5rem; font-weight: 700; font-size: 1rem;">
+    Submit Freight Dispatch Request
+  </button>
+</form>
+
+<script>
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbybDjjcOYcfYHS9BFEk3mreThYVXd0GzssedodNdqLE46EXf6PbPbkCO91y2z7_MQ75Zg/exec";
+
+  document.getElementById('tils-booking-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submit-btn');
+    const successBanner = document.getElementById('form-success');
+
+    btn.disabled = true;
+    btn.innerHTML = 'Submitting Request...';
+
+    const payload = {
+      Contact_Person: document.getElementById('contact_person').value,
+      Company_Name: document.getElementById('company_name').value,
+      email: document.getElementById('email').value,
+      phone: document.getElementById('phone').value,
+      Origin: document.getElementById('origin').value,
+      Destination: document.getElementById('destination').value,
+      Cargo_Payload_Type: document.getElementById('cargo_type').value,
+      Consignment_Details: document.getElementById('consignment_details').value
+    };
+
+    try {
+      await fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+
+      document.getElementById('tils-booking-form').reset();
+      btn.innerHTML = 'Submit Freight Dispatch Request';
+      btn.disabled = false;
+      successBanner.style.display = 'flex';
+      setTimeout(() => { successBanner.style.display = 'none'; }, 8000);
+    } catch (err) {
+      alert("Error submitting request. Please contact +91 7845514762 directly.");
+      btn.disabled = false;
+      btn.innerHTML = 'Submit Freight Dispatch Request';
+    }
+  });
+</script>
+
 
       </div>
 
